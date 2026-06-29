@@ -352,7 +352,7 @@ body{font-family:system-ui,-apple-system,sans-serif;background:var(--g50);color:
     else{didAnswer=false;document.getElementById('btn-next').disabled=true;var expEl=document.getElementById('q-exp');expEl.className='exp'+(isWU?' wu-exp':'');}
     var nx=document.getElementById('btn-next'),isLast=curQ>=pool.length-1;
     nx.className='btn-next'+(isWU?' teal':'');
-    nx.textContent=(isWU&&isLast)?'Start questions →':isLast?'Finish ✓':'Next →';
+    nx.textContent=(isWU&&isLast)?'Start questions \u2192':isLast?'Finish \u2713':'Next \u2192';
   }
 
   function pick(letter,btn,q){
