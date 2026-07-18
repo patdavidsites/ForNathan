@@ -72,11 +72,12 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-fa
 .qz-q.incorrect .qz-feedback{display:block;background:var(--bad-bg);color:var(--bad);}
 .qz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:16px;gap:12px;}
 .qz-nav-spacer{flex:1;}
-#qz-prev, #qz-next, #qz-retry{font-family:'Helvetica Neue',Arial,sans-serif;font-size:14.5px;font-weight:700;padding:11px 22px;border-radius:30px;border:none;cursor:pointer;}
+#qz-prev, #qz-next, #qz-retry, #qz-download, .qz-len-btn{font-family:'Helvetica Neue',Arial,sans-serif;font-size:14.5px;font-weight:700;padding:11px 22px;border-radius:30px;border:none;cursor:pointer;}
 #qz-prev{background:#efece3;color:var(--ink);}
 #qz-prev:disabled{opacity:.4;cursor:default;}
 #qz-next{background:var(--accent);color:#fff;box-shadow:0 4px 14px rgba(107,76,230,.35);}
 #qz-retry{background:var(--ink);color:#fff;display:none;margin-top:10px;}
+#qz-download{background:var(--good);color:#fff;display:none;margin-top:10px;margin-left:10px;}
 .qz-result{display:none;text-align:center;font-family:'Helvetica Neue',Arial,sans-serif;margin:18px 0 8px;}
 .qz-result .score{font-size:42px;font-weight:800;color:var(--accent);}
 .qz-result .msg{font-size:15px;color:var(--muted);margin-top:4px;}
@@ -92,6 +93,14 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-fa
 .qz-review-row.weak{border-color:var(--bad);}
 .qz-review-row.strong{border-color:var(--good);}
 .qz-review-note{font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;color:var(--muted);margin-top:10px;}
+
+.qz-start{text-align:center;padding:20px 10px 10px;}
+.qz-start p{font-size:14px;color:var(--muted);max-width:520px;margin:0 auto 20px;}
+.qz-len-choices{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.qz-len-btn{background:var(--card);color:var(--ink);border:2px solid var(--line);padding:18px 30px;min-width:150px;}
+.qz-len-btn:hover{border-color:var(--accent);}
+.qz-len-btn .n{display:block;font-size:26px;font-weight:800;color:var(--accent);}
+.qz-len-btn .l{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-top:2px;}
 </style>
 </head>
 <body>
@@ -191,12 +200,11 @@ A client asks you to recommend a fund that pays your practice higher trail commi
 <tr><td>Diligence</td><td>Was the work actually followed through with proper care?</td></tr>
 <tr><td>Trustworthiness</td><td>Can this person be relied on to do the right thing, consistently, even unsupervised?</td></tr>
 </table>
-<h3>Worked example — "it's not Honesty, what else could it be?"</h3>
-<p><em>Scenario: An adviser recommends Fund A over the objectively better Fund B because Fund A pays higher trail commission. The adviser doesn't lie about anything — they just don't mention the commission difference.</em></p>
-<ul>
-<li>Ask: was anything <strong>untrue</strong>? No — so it's not Honesty.</li>
-<li>Ask: did <strong>self-interest distort the recommendation</strong>? Yes — that's <strong>Fairness</strong>.</li>
-</ul>
+<h3>Worked Example — "It's Not Honesty, What Else Could It Be?"</h3>
+<div class="q"><div class="label">Scenario</div>
+An adviser recommends Fund A over the objectively better Fund B because Fund A pays higher trail commission. The adviser doesn't lie about anything — they just don't mention the commission difference.
+<div class="ans">Ask: was anything <strong>untrue</strong>? No — so it's not Honesty. Ask: did <strong>self-interest distort the recommendation</strong>? Yes — that's <strong>Fairness</strong>.</div>
+</div>
 <h3>Other common swaps to drill</h3>
 <ul>
 <li><strong>"Not Competence, what else?"</strong> — Adviser clearly knows the right answer but rushed or skipped steps → <strong>Diligence</strong>, not Competence. Competence is about capability; Diligence is about effort and thoroughness.</li>
@@ -204,6 +212,16 @@ A client asks you to recommend a fund that pays your practice higher trail commi
 <li><strong>"Not Fairness, what else?"</strong> — No conflict of interest at all, but the adviser genuinely didn't understand the product → <strong>Competence</strong>, not Fairness.</li>
 </ul>
 <div class="note">The habit to build: every time you eliminate a value, name specifically what failed — a fact, a bias, a skill gap, a follow-through gap, or a broken commitment. Whichever of those five things it was, that tells you the value — each value only "owns" one of them.</div>
+<h3>More Practice Scenarios</h3>
+<p>Six more swaps, each isolating a different pair of values:</p>
+<ul>
+<li><strong>Not Diligence, what else?</strong> — Adviser ticks every checklist box and submits on time, but recommends a geared investment without understanding how gearing amplifies losses → <strong>Competence</strong>. The process was followed perfectly; the gap is knowledge, not effort.</li>
+<li><strong>Not Fairness, what else?</strong> — Adviser fully discloses a conflict of interest and the client is happy to proceed, but the adviser then misses the compliance lodgement deadline → <strong>Diligence</strong>. The conflict itself was handled properly; what failed was follow-through.</li>
+<li><strong>Not Competence, what else?</strong> — Adviser understands the client's needs and the product terms perfectly, but tells them a policy has "no exclusions" while knowing it excludes pre-existing conditions, just to close the sale → <strong>Honesty</strong>. A knowing false statement, not a knowledge gap.</li>
+<li><strong>Not Honesty, what else?</strong> — Everything in an adviser's SOA is factually accurate, but they consistently recommend in-house funds over better external options, despite disclosing the arrangement each time → <strong>Fairness</strong>. Nothing untrue was said; the pattern of self-interest is the issue.</li>
+<li><strong>Not Diligence, what else?</strong> — Adviser produces thorough, accurate work on every file, but has told this client three separate times they'd send updated documents and never has → <strong>Trustworthiness</strong>. The work itself is fine; it's the broken pattern of commitments that's the problem.</li>
+<li><strong>Not Trustworthiness, what else?</strong> — Adviser is usually completely reliable, but this one time submits an SOA with several incomplete sections because they were behind on other files → <strong>Diligence</strong>. A single lapse in thoroughness, not an established pattern of unreliability.</li>
+</ul>
 <div class="practice">
 <div class="ptitle">Practice — Overlapping Values — The Elimination Technique</div>
 <div class="mcq">
@@ -271,10 +289,79 @@ A client asks you to recommend a fund that pays your practice higher trail commi
 <div class="opt incorrect">D. ✗ Incorrect — Nothing untrue was stated — the problem is the undisclosed bias, not false information.</div></div>
 </details>
 </div>
+<div class="mcq">
+<div class="stem">An adviser ticks every checklist box and submits everything on time, but recommends a geared investment without understanding how gearing amplifies losses. If it isn't Diligence, what is it?</div>
+<ol><li>Competence</li>
+<li>Honesty</li>
+<li>Fairness</li>
+<li>Trustworthiness</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt correct">A. ✓ Correct — Correct — the process was followed perfectly; the actual gap is not understanding how the product works, which is Competence.</div>
+<div class="opt incorrect">B. ✗ Incorrect — Nothing untrue was said.</div>
+<div class="opt incorrect">C. ✗ Incorrect — No conflict of interest or bias is described.</div>
+<div class="opt incorrect">D. ✗ Incorrect — This is a single file, not a pattern of broken reliability.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">An adviser fully discloses a conflict of interest and the client is comfortable proceeding, but the adviser then misses a compliance lodgement deadline for the paperwork. If it isn't Fairness, what is it?</div>
+<ol><li>Diligence</li>
+<li>Honesty</li>
+<li>Competence</li>
+<li>Trustworthiness</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt correct">A. ✓ Correct — Correct — the conflict itself was handled properly (disclosed, client consented); the failure is a follow-through issue, which is Diligence.</div>
+<div class="opt incorrect">B. ✗ Incorrect — Nothing untrue was said.</div>
+<div class="opt incorrect">C. ✗ Incorrect — This isn't a knowledge or skill gap.</div>
+<div class="opt incorrect">D. ✗ Incorrect — A single missed deadline on an otherwise-handled matter isn't evidence of a broader reliability pattern.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">An adviser understands a client's needs and the product's terms perfectly, but tells them a policy has 'no exclusions' while knowing it excludes pre-existing conditions, just to close the sale. If it isn't Competence, what is it?</div>
+<ol><li>Honesty</li>
+<li>Fairness</li>
+<li>Diligence</li>
+<li>Trustworthiness</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt correct">A. ✓ Correct — Correct — this is a knowing false statement, which is Honesty, not a knowledge gap.</div>
+<div class="opt incorrect">B. ✗ Incorrect — The scenario doesn't describe an undisclosed conflict of interest — it describes a deliberately false claim.</div>
+<div class="opt incorrect">C. ✗ Incorrect — This isn't about thoroughness or follow-through.</div>
+<div class="opt incorrect">D. ✗ Incorrect — A single false statement is most precisely an Honesty breach at the point it's made.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">An adviser's SOA is completely accurate, but they consistently recommend in-house funds over better external options, despite disclosing the arrangement each time. If it isn't Honesty, what is it?</div>
+<ol><li>Fairness</li>
+<li>Competence</li>
+<li>Diligence</li>
+<li>Trustworthiness</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt correct">A. ✓ Correct — Correct — a consistent pattern of self-interest shaping recommendations, even with disclosure, is a Fairness issue.</div>
+<div class="opt incorrect">B. ✗ Incorrect — No knowledge or skill gap is described.</div>
+<div class="opt incorrect">C. ✗ Incorrect — This isn't about thoroughness or follow-through.</div>
+<div class="opt incorrect">D. ✗ Incorrect — The core issue tested here is bias distorting outcomes, which is Fairness.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">An adviser produces thorough, accurate work on every file, but has told this client three separate times they'd send updated documents and never has. If it isn't Diligence, what is it?</div>
+<ol><li>Trustworthiness</li>
+<li>Competence</li>
+<li>Honesty</li>
+<li>Fairness</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt correct">A. ✓ Correct — Correct — the work quality itself is fine; it's the repeated pattern of broken commitments that undermines reliability, which is Trustworthiness.</div>
+<div class="opt incorrect">B. ✗ Incorrect — No knowledge or skill gap is described.</div>
+<div class="opt incorrect">C. ✗ Incorrect — A broken promise isn't the same as a false statement.</div>
+<div class="opt incorrect">D. ✗ Incorrect — No conflict of interest is described.</div></div>
+</details>
+</div>
 </div></section><section id="section-3"><h2><span class="num">3</span>Deontological vs Consequentialist Ethics</h2>
 <p><strong>Deontological ethics</strong> = duty-based. An action is right or wrong based on rules/duties, regardless of outcome. The Code of Ethics is fundamentally deontological — you follow the standards because they're your duty, not because a particular client outcome worked out well.</p>
 <p><strong>Consequentialist ethics</strong> = outcome-based. An action is judged by its results (e.g. "the client ended up better off, so it was fine").</p>
 <div class="note">Exam pattern: a scenario shows a <em>good outcome</em> reached through a <em>questionable process</em>. The correct FASEA answer is almost always the deontological one — the duty was breached, regardless of outcome.</div>
+<div class="q"><div class="label">Worked Example</div>
+A client is unhappy to learn their adviser never completed a full needs analysis before recommending a life insurance policy — even though the policy turned out to suit them well. The client asks: "It worked out fine, so what's the problem?" How would you explain the issue?
+<div class="ans">Under a deontological view, the duty to complete a proper needs analysis existed regardless of the outcome. The adviser still breached that duty (touching Standards 5 and 6) — a good result doesn't retroactively justify skipping the process. This is separate from whether the client actually suffered a loss.</div>
+</div>
 <div class="practice">
 <div class="ptitle">Practice — Deontological vs Consequentialist Ethics</div>
 <div class="mcq">
@@ -353,6 +440,10 @@ A client asks you to recommend a fund that pays your practice higher trail commi
 <li><strong>Standard 12</strong> — Uphold and promote the ethical standards of the profession</li>
 </ul>
 <p class="note">You don't need every standard word-for-word — you need to be able to <strong>identify which standard a scenario breaches</strong>.</p>
+<div class="q"><div class="label">Worked Example</div>
+A client later discovers their adviser recommended a fund managed by the adviser's own related entity, without ever mentioning the connection. Which Standard does this most directly breach?
+<div class="ans">Standard 3 — acting where there's an undisclosed conflict of interest or duty. It may also touch Standard 2 (honesty and best interests) and Standard 5, but the conflict itself is squarely a Standard 3 issue.</div>
+</div>
 <div class="practice">
 <div class="ptitle">Practice — Values & Standards — Quick Structure</div>
 <div class="mcq">
@@ -423,13 +514,63 @@ A client asks you to recommend a fund that pays your practice higher trail commi
 </div></section><section id="section-5"><h2><span class="num">5</span>DDO, ASIC RGs &amp; AML/CTF</h2>
 <h3>Design and Distribution Obligations (DDO)</h3>
 <p>Product issuers must make a <strong>Target Market Determination (TMD)</strong> for each product. Distributors (including advisers) must take reasonable steps to ensure the product is distributed consistently with that TMD. Recommending outside it needs to be justified and documented.</p>
+<h3>What's Actually In a TMD</h3>
+<ul>
+<li><strong>Target market</strong> — the class of consumers the product is likely to be appropriate for, based on their objectives, financial situation and needs.</li>
+<li><strong>Distribution conditions</strong> — any conditions or restrictions on how it can be distributed (e.g. only via personal advice, not direct to consumers).</li>
+<li><strong>Review triggers</strong> — events that require the issuer to review the TMD (e.g. a significant dealing outside the target market, a spike in complaints, a material product change).</li>
+<li><strong>Review periods</strong> — the maximum time allowed between scheduled reviews of the TMD.</li>
+</ul>
+<h3>Distributor Obligations</h3>
+<ul>
+<li>Take reasonable steps to distribute the product consistently with its TMD.</li>
+<li>Notify the issuer of a <strong>significant dealing</strong> outside the target market within <strong>10 business days</strong>.</li>
+<li>Keep records of distribution conduct and complaints, and report this data to the issuer as required.</li>
+</ul>
+<div class="q"><div class="label">Worked Example</div>
+An adviser recommends a high-growth geared fund (TMD target market: experienced investors with high risk tolerance) to a conservative retiree client, because it's the only product that satisfies a specific tax objective. What's the DDO issue?
+<div class="ans">This is a significant dealing outside the TMD. The adviser needs to justify and document why it's still appropriate for this specific client (consistent with the best interests duty), and the distributor should notify the issuer of the significant dealing within 10 business days.</div>
+</div>
 <h3>ASIC Regulatory Guides (RGs)</h3>
-<p>ASIC's RGs explain how ASIC interprets and administers the law — guidance, not law itself. Key ones: <strong>RG 175</strong> (licensing, conduct &amp; disclosure), <strong>RG 244</strong> (general/scaled advice), <strong>RG 246</strong> (conflicted remuneration).</p>
+<p>ASIC's RGs explain how ASIC interprets and administers the law — guidance, not law itself. Beyond the "big three" (RG 175, RG 244, RG 246), these come up often too:</p>
+<table>
+<tr><th>RG</th><th>What it covers</th></tr>
+<tr><td>RG 146</td><td>Training standards for people giving general advice (Tier 1/Tier 2) — separate from FASEA's relevant provider education standards</td></tr>
+<tr><td>RG 175</td><td>Licensing: financial product advisers — conduct and disclosure</td></tr>
+<tr><td>RG 244</td><td>Giving information, general advice and scaled advice</td></tr>
+<tr><td>RG 246</td><td>Conflicted remuneration</td></tr>
+<tr><td>RG 97</td><td>Disclosing fees and costs in PDSs and periodic statements</td></tr>
+<tr><td>RG 104</td><td>Licensing: meeting the general obligations</td></tr>
+<tr><td>RG 105</td><td>Licensing: organisational competence</td></tr>
+<tr><td>RG 181</td><td>Licensing: managing conflicts of interest</td></tr>
+<tr><td>RG 271</td><td>Internal dispute resolution</td></tr>
+<tr><td>RG 279</td><td>Breach reporting — the reportable situations regime</td></tr>
+</table>
+<div class="note">Exam tip: you don't need every RG number memorised. What matters is recognising that an RG is <em>guidance on how ASIC applies the law</em> — if a question asks "is this binding law?", an RG is never the answer; the underlying Act is.</div>
 <h3>AML/CTF</h3>
-<p>Anti-Money Laundering / Counter-Terrorism Financing Act 2006. Practical relevance for advisers: <strong>client identification (KYC)</strong> before providing designated services, plus ongoing monitoring for suspicious activity.</p>
+<p>Anti-Money Laundering / Counter-Terrorism Financing Act 2006. What it actually requires of an adviser:</p>
+<ul>
+<li><strong>Customer identification (KYC)</strong> — verify who the client is before providing a designated service.</li>
+<li><strong>Ongoing customer due diligence</strong> — monitor transactions and check they're consistent with what you know about the client.</li>
+<li><strong>Enhanced due diligence</strong> — extra scrutiny for higher-risk clients, e.g. politically exposed persons (PEPs) or those connected to high-risk jurisdictions.</li>
+<li><strong>Reporting to AUSTRAC</strong> — Suspicious Matter Reports (SMRs) for suspicious activity, Threshold Transaction Reports (TTRs) for cash-equivalent transactions of $10,000 or more.</li>
+<li><strong>Record-keeping</strong> — retain identification and transaction records for at least 7 years.</li>
+</ul>
+<h3>AML/CTF Red Flags</h3>
+<ul>
+<li>Reluctance or refusal to provide identification documents.</li>
+<li>Complex ownership structures with no clear commercial rationale.</li>
+<li>Transactions inconsistent with the client's known profile or stated purpose.</li>
+<li>Unusual urgency or pressure to bypass normal processes.</li>
+<li>Large cash movements or third-party funding with no clear relationship to the client.</li>
+</ul>
 <div class="q"><div class="label">Worked Example</div>
 A client wants to invest via a company structure with an overseas beneficial owner who won't provide ID. What's the compliance issue?
 <div class="ans">AML/CTF customer identification requirements aren't met — you can't proceed with the designated service until beneficial ownership is verified.</div>
+</div>
+<div class="q"><div class="label">Worked Example</div>
+A new client wants to urgently transfer $50,000 into an investment account from an unrelated third party, and is reluctant to explain the relationship. What should the adviser do?
+<div class="ans">This is a red flag — unclear third-party funding plus urgency. Pause, apply enhanced due diligence, and consider whether a Suspicious Matter Report to AUSTRAC is warranted, rather than proceeding under normal timeframes.</div>
 </div>
 <div class="practice">
 <div class="ptitle">Practice — DDO, ASIC RGs &amp; AML/CTF</div>
@@ -498,6 +639,201 @@ A client wants to invest via a company structure with an overseas beneficial own
 <div class="opt incorrect">D. ✗ Incorrect — AML/CTF client ID isn't covered by an ASIC RG; it sits under the AML/CTF Act.</div></div>
 </details>
 </div>
+<div class="mcq">
+<div class="stem">Which of these is NOT something a Target Market Determination (TMD) is required to specify?</div>
+<ol><li>Target market description</li>
+<li>Distribution conditions</li>
+<li>The adviser's fee for recommending it</li>
+<li>Review triggers</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — This is a required TMD component.</div>
+<div class="opt incorrect">B. ✗ Incorrect — This is a required TMD component.</div>
+<div class="opt correct">C. ✓ Correct — Correct — an adviser's fee is not part of a TMD; TMDs describe the product's suitability and distribution, not remuneration.</div>
+<div class="opt incorrect">D. ✗ Incorrect — This is a required TMD component.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Within what timeframe must a distributor notify the issuer of a 'significant dealing' outside the target market?</div>
+<ol><li>24 hours</li>
+<li>10 business days</li>
+<li>30 calendar days</li>
+<li>There's no notification requirement</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Too short — this isn't the actual timeframe.</div>
+<div class="opt correct">B. ✓ Correct — Correct — significant dealings outside the TMD must be notified to the issuer within 10 business days.</div>
+<div class="opt incorrect">C. ✗ Incorrect — Too long — this isn't the actual timeframe.</div>
+<div class="opt incorrect">D. ✗ Incorrect — There is a notification requirement under DDO.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Which of these is a genuine example of a TMD 'review trigger'?</div>
+<ol><li>The adviser changes employer</li>
+<li>A significant dealing outside the target market occurs</li>
+<li>The client turns 65</li>
+<li>The product's ASX ticker changes</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Not a TMD review trigger — this relates to the adviser, not the product or its distribution.</div>
+<div class="opt correct">B. ✓ Correct — Correct — a significant dealing outside the target market is a classic review trigger.</div>
+<div class="opt incorrect">C. ✗ Incorrect — A client's age isn't itself a review trigger for the product's TMD.</div>
+<div class="opt incorrect">D. ✗ Incorrect — A ticker change is an administrative detail, not a review trigger.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">A distributor's obligations under DDO include:</div>
+<ol><li>Setting the product's target market themselves</li>
+<li>Keeping records of distribution conduct and complaints</li>
+<li>Approving the issuer's PDS</li>
+<li>Deciding the product's investment strategy</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — The issuer sets the target market, not the distributor.</div>
+<div class="opt correct">B. ✓ Correct — Correct — distributors must keep records of distribution conduct and complaints, and report them as required.</div>
+<div class="opt incorrect">C. ✗ Incorrect — PDS approval isn't a distributor obligation under DDO.</div>
+<div class="opt incorrect">D. ✗ Incorrect — Investment strategy is an issuer decision, not a distributor obligation.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">An adviser recommends a fund outside its stated target market because it uniquely suits an unusual client need. What does DDO require?</div>
+<ol><li>Nothing — TMDs are only guidelines</li>
+<li>Justify and document the dealing, and report it to the issuer within 10 business days if significant</li>
+<li>Reclassify the client as wholesale</li>
+<li>Cancel the adviser's Australian Financial Services Licence (AFSL) authorisation</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — TMDs carry real obligations, not just guideline status.</div>
+<div class="opt correct">B. ✓ Correct — Correct — the dealing needs to be justified and documented, and reported to the issuer within 10 business days if it's significant.</div>
+<div class="opt incorrect">C. ✗ Incorrect — Wholesale/retail classification is unrelated to a TMD dealing.</div>
+<div class="opt incorrect">D. ✗ Incorrect — This isn't a licence-cancellation matter.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">RG 146 sets training standards for:</div>
+<ol><li>Relevant providers under FASEA</li>
+<li>People giving general advice (Tier 1/Tier 2)</li>
+<li>SMSF trustees</li>
+<li>AFSL licensees' compliance officers only</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Relevant providers are governed by FASEA's education standards, a separate regime from RG146.</div>
+<div class="opt correct">B. ✓ Correct — Correct — RG146 sets Tier 1/Tier 2 training standards for people giving general advice.</div>
+<div class="opt incorrect">C. ✗ Incorrect — SMSF trustees aren't the subject of RG146.</div>
+<div class="opt incorrect">D. ✗ Incorrect — RG146 isn't limited to compliance officers.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Which RG covers how fees and costs must be disclosed in PDSs and periodic statements?</div>
+<ol><li>RG 97</li>
+<li>RG 175</li>
+<li>RG 244</li>
+<li>RG 271</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt correct">A. ✓ Correct — Correct — RG 97 covers fee and cost disclosure in PDSs and periodic statements.</div>
+<div class="opt incorrect">B. ✗ Incorrect — RG 175 covers licensing conduct and disclosure generally.</div>
+<div class="opt incorrect">C. ✗ Incorrect — RG 244 covers general and scaled advice.</div>
+<div class="opt incorrect">D. ✗ Incorrect — RG 271 covers internal dispute resolution.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">RG 279 relates to:</div>
+<ol><li>Conflicted remuneration</li>
+<li>Breach reporting under the reportable situations regime</li>
+<li>General insurance training</li>
+<li>AML/CTF client identification</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — That's RG 246.</div>
+<div class="opt correct">B. ✓ Correct — Correct — RG 279 covers the reportable situations (breach reporting) regime.</div>
+<div class="opt incorrect">C. ✗ Incorrect — That's RG 146.</div>
+<div class="opt incorrect">D. ✗ Incorrect — AML/CTF client ID isn't covered by an ASIC RG; it sits under the AML/CTF Act.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Which RG deals specifically with managing conflicts of interest for licensees?</div>
+<ol><li>RG 104</li>
+<li>RG 105</li>
+<li>RG 181</li>
+<li>RG 246</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — RG 104 covers meeting general licensee obligations.</div>
+<div class="opt incorrect">B. ✗ Incorrect — RG 105 covers organisational competence.</div>
+<div class="opt correct">C. ✓ Correct — Correct — RG 181 covers managing conflicts of interest.</div>
+<div class="opt incorrect">D. ✗ Incorrect — RG 246 covers conflicted remuneration specifically, a related but distinct topic.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">If an exam question asks whether an RG is binding law, the correct answer is always:</div>
+<ol><li>Yes, RGs are equivalent to legislation</li>
+<li>No, RGs are ASIC's guidance on how it applies the law, not binding law itself</li>
+<li>Only if ASIC says so in the RG itself</li>
+<li>It depends on which RG it is</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — RGs are never equivalent to legislation.</div>
+<div class="opt correct">B. ✓ Correct — Correct — this is true of every RG, without exception.</div>
+<div class="opt incorrect">C. ✗ Incorrect — This isn't how the distinction works.</div>
+<div class="opt incorrect">D. ✗ Incorrect — All RGs are guidance, regardless of topic — this doesn't vary by RG.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Ongoing customer due diligence under AML/CTF means:</div>
+<ol><li>Verifying ID once at onboarding only</li>
+<li>Monitoring transactions on an ongoing basis for consistency with what's known about the client</li>
+<li>It only applies to wholesale clients</li>
+<li>It's only required for cash transactions</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Due diligence isn't a one-off, onboarding-only exercise.</div>
+<div class="opt correct">B. ✓ Correct — Correct — it's ongoing monitoring for consistency with the client's known profile.</div>
+<div class="opt incorrect">C. ✗ Incorrect — It applies regardless of retail/wholesale classification.</div>
+<div class="opt incorrect">D. ✗ Incorrect — It applies beyond cash transactions specifically.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Enhanced due diligence is typically applied to:</div>
+<ol><li>Every client regardless of risk</li>
+<li>Higher-risk clients such as politically exposed persons (PEPs)</li>
+<li>Only clients under 18</li>
+<li>Only clients receiving general advice</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Enhanced due diligence is risk-based, not applied uniformly to everyone.</div>
+<div class="opt correct">B. ✓ Correct — Correct — PEPs and other higher-risk clients receive enhanced due diligence.</div>
+<div class="opt incorrect">C. ✗ Incorrect — Age isn't the determining factor.</div>
+<div class="opt incorrect">D. ✗ Incorrect — Advice type isn't the determining factor for AML/CTF risk.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">A Threshold Transaction Report (TTR) is generally required for cash-equivalent transactions of:</div>
+<ol><li>$1,000 or more</li>
+<li>$10,000 or more</li>
+<li>$100,000 or more</li>
+<li>Any amount at all</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — This is below the actual threshold.</div>
+<div class="opt correct">B. ✓ Correct — Correct — $10,000 or more (or foreign equivalent) triggers a TTR.</div>
+<div class="opt incorrect">C. ✗ Incorrect — This is above the actual threshold.</div>
+<div class="opt incorrect">D. ✗ Incorrect — There is a specific threshold, not an any-amount rule.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">AML/CTF records must generally be kept for at least:</div>
+<ol><li>1 year</li>
+<li>3 years</li>
+<li>7 years</li>
+<li>Indefinitely</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Too short a period.</div>
+<div class="opt incorrect">B. ✗ Incorrect — Too short a period.</div>
+<div class="opt correct">C. ✓ Correct — Correct — records generally need to be retained for at least 7 years.</div>
+<div class="opt incorrect">D. ✗ Incorrect — There is a defined minimum period, not an indefinite requirement.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Which of these is a genuine AML/CTF red flag?</div>
+<ol><li>A client provides ID documents promptly</li>
+<li>A client requests a large, urgent transfer from an unrelated third party and won't explain the relationship</li>
+<li>A client asks routine questions about fees</li>
+<li>A client updates their contact details</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Prompt, cooperative ID provision is not a red flag.</div>
+<div class="opt correct">B. ✓ Correct — Correct — unexplained third-party funding combined with urgency is a classic red flag.</div>
+<div class="opt incorrect">C. ✗ Incorrect — Routine fee questions are normal client behaviour.</div>
+<div class="opt incorrect">D. ✗ Incorrect — Updating contact details is routine account maintenance.</div></div>
+</details>
+</div>
 </div></section><section id="section-6"><h2><span class="num">6</span>Australian Privacy Principles (APPs)</h2>
 <table>
 <tr><th>APP</th><th>Principle</th><th>One-line summary</th></tr>
@@ -519,6 +855,23 @@ A client wants to invest via a company structure with an overseas beneficial own
 A client emails asking for a copy of everything you hold about them. Which APP governs this, and can you refuse?
 <div class="ans">APP 12 (Access). You must generally provide access within a reasonable period, though narrow exceptions exist (e.g. unreasonable impact on another person's privacy).</div>
 </div>
+<h3>A Concrete Example For Each APP</h3>
+<table>
+<tr><th>APP</th><th>Example</th></tr>
+<tr><td>1</td><td>A practice publishes a clear privacy policy explaining what client data it collects, why, and who it's shared with (the licensee, platforms, outsourced admin providers).</td></tr>
+<tr><td>2</td><td>A prospective client asks general questions about SMSF fees by phone without giving their name — the adviser answers generally, since no personal advice is being given yet.</td></tr>
+<tr><td>3</td><td>During a fact find, the adviser only asks for information relevant to giving advice (income, assets, goals), not unrelated details like extended family medical history.</td></tr>
+<tr><td>4</td><td>A client accidentally emails a spreadsheet containing another client's data. The adviser must assess whether it could have been lawfully collected and, if not, securely destroy or de-identify it.</td></tr>
+<tr><td>5</td><td>At the first meeting, the adviser tells the client their information will be used to prepare an SOA and may be shared with the licensee's compliance team and product providers.</td></tr>
+<tr><td>6</td><td>The adviser doesn't use a client's contact details, collected for advice purposes, to add them to an unrelated marketing list without separate consent.</td></tr>
+<tr><td>7</td><td>A practice's market-update newsletter only goes to clients who've opted in, with an easy opt-out in every email.</td></tr>
+<tr><td>8</td><td>A licensee using an offshore-hosted CRM must ensure that provider handles data consistently with the APPs, typically via contractual clauses.</td></tr>
+<tr><td>9</td><td>An adviser records a client's TFN for tax reporting but doesn't use it as the client's internal file reference number in the practice's CRM.</td></tr>
+<tr><td>10</td><td>Before submitting an SOA, the adviser confirms the client's income and asset figures are current, not carried over unchanged from a three-year-old file.</td></tr>
+<tr><td>11</td><td>Client files sit in an access-controlled, encrypted system; old records are securely destroyed once retention obligations expire.</td></tr>
+<tr><td>12</td><td>A client asks for a copy of everything held about them; the practice provides it within a reasonable timeframe, subject to narrow exceptions.</td></tr>
+<tr><td>13</td><td>A client who's moved house asks the practice to update their old address on file — it's corrected promptly.</td></tr>
+</table>
 <div class="practice">
 <div class="ptitle">Practice — Australian Privacy Principles (APPs)</div>
 <div class="mcq">
@@ -586,6 +939,71 @@ A client emails asking for a copy of everything you hold about them. Which APP g
 <div class="opt incorrect">D. ✗ Incorrect — APP 3 is about collection of information.</div></div>
 </details>
 </div>
+<div class="mcq">
+<div class="stem">A prospective client asks general questions about SMSF fees over the phone without giving their name. What does this reflect?</div>
+<ol><li>A breach of APP 3</li>
+<li>APP 2 in action — allowing anonymous interaction where practicable</li>
+<li>A mandatory identification requirement</li>
+<li>A breach of APP 9</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — No breach — no personal information collection is required for a general question.</div>
+<div class="opt correct">B. ✓ Correct — Correct — APP 2 supports anonymous or pseudonymous interaction where lawful and practicable, and general enquiries are a good example.</div>
+<div class="opt incorrect">C. ✗ Incorrect — There's no such mandatory requirement for a general enquiry.</div>
+<div class="opt incorrect">D. ✗ Incorrect — APP 9 concerns government identifiers, not anonymity.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">An adviser only collects the information relevant to preparing advice, avoiding unrelated personal details. This reflects:</div>
+<ol><li>APP 6</li>
+<li>APP 3</li>
+<li>APP 11</li>
+<li>APP 13</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — APP 6 is about use/disclosure, not collection scope.</div>
+<div class="opt correct">B. ✓ Correct — Correct — APP 3 requires only collecting what's reasonably necessary.</div>
+<div class="opt incorrect">C. ✗ Incorrect — APP 11 is about security.</div>
+<div class="opt incorrect">D. ✗ Incorrect — APP 13 is about correction.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">A licensee uses an offshore CRM provider to store client data. Under APP 8, what must it do?</div>
+<ol><li>Nothing — offshore storage isn't covered</li>
+<li>Take reasonable steps to ensure the overseas provider also protects the data consistently with the APPs</li>
+<li>Notify OAIC before every offshore transfer</li>
+<li>Avoid collecting any data at all</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Offshore storage is very much covered by APP 8.</div>
+<div class="opt correct">B. ✓ Correct — Correct — reasonable steps must be taken to ensure APP-equivalent protection overseas.</div>
+<div class="opt incorrect">C. ✗ Incorrect — There's no such transfer-by-transfer notification requirement to OAIC.</div>
+<div class="opt incorrect">D. ✗ Incorrect — The obligation is about safeguards, not an outright ban on data collection.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">An adviser records a client's TFN for tax purposes but doesn't use it as their internal client reference number. This reflects:</div>
+<ol><li>APP 3</li>
+<li>APP 9</li>
+<li>APP 12</li>
+<li>APP 5</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — APP 3 is about what's collected, not how identifiers are used internally.</div>
+<div class="opt correct">B. ✓ Correct — Correct — APP 9 restricts using government identifiers like a TFN as your own internal client identifier.</div>
+<div class="opt incorrect">C. ✗ Incorrect — APP 12 is about access requests.</div>
+<div class="opt incorrect">D. ✗ Incorrect — APP 5 is about notifying the client at the point of collection.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">A client asks for a copy of everything a practice holds about them, and it's provided within a reasonable timeframe. This reflects:</div>
+<ol><li>APP 6</li>
+<li>APP 9</li>
+<li>APP 12</li>
+<li>APP 13</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — APP 6 is about use/disclosure for the original purpose, not access requests.</div>
+<div class="opt incorrect">B. ✗ Incorrect — APP 9 is about government identifiers.</div>
+<div class="opt correct">C. ✓ Correct — Correct — APP 12 governs an individual's right to access their own personal information.</div>
+<div class="opt incorrect">D. ✗ Incorrect — APP 13 is about correcting information, not providing access to it.</div></div>
+</details>
+</div>
 </div></section><section id="section-7"><h2><span class="num">7</span>Research — Where the Answers Are</h2>
 <p>Know your source hierarchy for the exam:</p>
 <ol>
@@ -596,6 +1014,10 @@ A client emails asking for a copy of everything you hold about them. Which APP g
 <li><strong>AML/CTF Act 2006</strong> — client identification.</li>
 </ol>
 <div class="note">Exam tip: when a scenario feels ambiguous, ask "is this a <em>legal</em> obligation (Corporations Act) or an <em>ethical</em> obligation (Code of Ethics)?" — FASEA often wants the Code of Ethics angle specifically.</div>
+<div class="q"><div class="label">Worked Example</div>
+A scenario describes an adviser who technically satisfied every disclosure requirement in the Corporations Act, but a client still feels misled about a product's risk. Where do you look to assess this?
+<div class="ans">Start with the Code of Ethics. Legal compliance with disclosure rules doesn't automatically satisfy the ethical duty of Honesty and Fairness — the Corporations Act sets the legal floor, but the Code of Ethics is often the better lens for judging whether the conduct was actually appropriate.</div>
+</div>
 <div class="practice">
 <div class="ptitle">Practice — Research — Where the Answers Are</div>
 <div class="mcq">
@@ -763,9 +1185,44 @@ A client has $2.6M in net assets but wants full retail protections anyway. Can t
 </div></section><section id="section-9"><h2><span class="num">9</span>SMSF &amp; Insurance</h2>
 <ul>
 <li>Advising on establishing an SMSF is <strong>personal advice</strong> requiring a full best-interests process, with extra obligations since 2021 (e.g. comparing against an APRA-regulated fund).</li>
-<li><strong>Insurance inside super</strong> — consider premium funding via contributions, impact on retirement balance, and whether cover type (e.g. TPD "any occupation" vs "own occupation") suits the member.</li>
+<li><strong>Insurance inside super</strong> — consider premium funding via contributions, impact on retirement balance, and whether cover type (e.g. Total and Permanent Disability, TPD, "any occupation" vs "own occupation") suits the member.</li>
 <li>SMSF trustees carry <strong>personal liability</strong> — needs to be explained as part of suitability.</li>
 </ul>
+<h3>Trustee Structures</h3>
+<ul>
+<li><strong>Individual trustees</strong> — each member is a trustee (minimum two, unless it's a single-member fund with special rules). Assets must be held in all trustees' names, which gets messy on death, incapacity, or a change of membership.</li>
+<li><strong>Corporate trustee</strong> — a company acts as trustee, with each member as a director. Cleaner separation between personal and fund assets, smoother succession, easier for single-member funds — but carries ASIC company fees.</li>
+</ul>
+<h3>Contributions</h3>
+<ul>
+<li><strong>Concessional (before-tax)</strong> — employer SG, salary sacrifice, and personal deductible contributions combined. General cap: <strong>$32,500</strong> for FY2026–27 (indexed annually — always confirm the current figure). Unused cap from up to 5 previous years can be carried forward if total super balance is under $500,000.</li>
+<li><strong>Non-concessional (after-tax)</strong> — general cap: <strong>$130,000</strong> for FY2026–27 (4× the concessional cap). The <strong>bring-forward rule</strong> can allow up to 3 years' worth (up to $390,000) in a single year, subject to eligibility and total super balance thresholds.</li>
+<li>Non-concessional cap drops to <strong>nil</strong> if the member's total super balance is at or above the general transfer balance cap (<strong>$2.1 million</strong> from FY2026–27).</li>
+</ul>
+<h3>Pension Phase</h3>
+<ul>
+<li><strong>Accumulation phase</strong> — earnings taxed at up to 15%.</li>
+<li><strong>Retirement (pension) phase</strong> — earnings on assets supporting an account-based pension are generally tax-free, up to the member's transfer balance cap.</li>
+<li><strong>Transfer balance cap</strong> — limits how much can be moved into the tax-free retirement phase ($2.1 million from FY2026–27).</li>
+<li><strong>Minimum pension drawdown</strong> — an age-based percentage of the pension balance must be drawn each year once in pension phase.</li>
+</ul>
+<h3>Compliance Basics</h3>
+<ul>
+<li><strong>Sole purpose test</strong> — the fund must be maintained solely to provide retirement benefits to members (or their dependants on death).</li>
+<li><strong>In-house asset rule</strong> — investments in related parties are generally capped at 5% of the fund's total assets.</li>
+<li><strong>Arm's length dealing</strong> — all fund transactions must be on commercial, arm's length terms.</li>
+<li><strong>Investment strategy</strong> — must be documented, addressing diversification, liquidity, risk/return, and insurance for members.</li>
+<li><strong>Annual audit</strong> — every SMSF must be audited each year by an approved SMSF auditor, and lodge an annual return.</li>
+</ul>
+<div class="note">Figures above are indicative for FY2026–27 and are indexed periodically — always check the current year's caps before using them with a client.</div>
+<div class="q"><div class="label">Worked Example</div>
+A 45-year-old client has a total super balance of $450,000 and wants to contribute $300,000 from a recent inheritance into their SMSF this financial year. Can they do this?
+<div class="ans">Potentially yes, using the non-concessional bring-forward rule. Their total super balance is well under the $2.1 million transfer balance cap, so they're likely eligible to bring forward up to three years' worth of the non-concessional cap (up to $390,000) in one year — meaning the $300,000 contribution could fit within that bring-forward amount, rather than being limited to the standard annual $130,000 cap.</div>
+</div>
+<div class="q"><div class="label">Worked Example</div>
+An SMSF trustee wants the fund to buy a holiday house that the trustee's family can use on weekends. Is this allowed?
+<div class="ans">No. This breaches the sole purpose test — the fund's assets must be maintained solely to provide retirement benefits, not personal enjoyment for members or their families. It would likely also breach the in-house asset and arm's length dealing rules if a related party gets personal use of the asset.</div>
+</div>
 <div class="practice">
 <div class="ptitle">Practice — SMSF &amp; Insurance</div>
 <div class="mcq">
@@ -831,6 +1288,71 @@ A client has $2.6M in net assets but wants full retail protections anyway. Can t
 <div class="opt correct">B. ✓ Correct — Correct — the definition affects how achievable a successful claim is given the client's occupation.</div>
 <div class="opt incorrect">C. ✗ Incorrect — Definitions vary by product and insurer.</div>
 <div class="opt incorrect">D. ✗ Incorrect — These definitions apply broadly to TPD cover, not just within SMSFs.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">What is the key advantage of a corporate trustee structure for an SMSF?</div>
+<ol><li>Lower establishment cost than individual trustees</li>
+<li>Cleaner separation of personal and fund assets, and smoother succession</li>
+<li>Exemption from the sole purpose test</li>
+<li>No requirement for an investment strategy</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Corporate trustees typically cost more, not less, due to ASIC company fees.</div>
+<div class="opt correct">B. ✓ Correct — Correct — a corporate trustee separates personal and fund assets and handles succession more smoothly.</div>
+<div class="opt incorrect">C. ✗ Incorrect — The sole purpose test applies regardless of trustee structure.</div>
+<div class="opt incorrect">D. ✗ Incorrect — An investment strategy is required regardless of trustee structure.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">For FY2026–27, the general concessional contributions cap is:</div>
+<ol><li>$27,500</li>
+<li>$30,000</li>
+<li>$32,500</li>
+<li>$120,000</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — That was an earlier year's cap.</div>
+<div class="opt incorrect">B. ✗ Incorrect — That was the cap for FY2024–25 and FY2025–26.</div>
+<div class="opt correct">C. ✓ Correct — Correct — $32,500 from 1 July 2026.</div>
+<div class="opt incorrect">D. ✗ Incorrect — That's closer to the non-concessional cap, not the concessional one.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">The bring-forward rule for non-concessional contributions allows a member to:</div>
+<ol><li>Contribute unlimited amounts regardless of total super balance</li>
+<li>Access up to three years' worth of the non-concessional cap in a single year, subject to eligibility</li>
+<li>Avoid the sole purpose test</li>
+<li>Convert concessional contributions into non-concessional ones</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Contributions are never unlimited — eligibility and balance thresholds apply.</div>
+<div class="opt correct">B. ✓ Correct — Correct — eligible members can bring forward up to three years' non-concessional cap in one year.</div>
+<div class="opt incorrect">C. ✗ Incorrect — The bring-forward rule has nothing to do with the sole purpose test.</div>
+<div class="opt incorrect">D. ✗ Incorrect — It doesn't convert contribution types; it only affects timing of the non-concessional cap.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">What does the transfer balance cap limit?</div>
+<ol><li>The total amount that can be held in an SMSF</li>
+<li>The amount that can be moved into a tax-free retirement phase pension account</li>
+<li>The maximum number of members in an SMSF</li>
+<li>The maximum insurance cover held inside super</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — An SMSF's total assets aren't capped by this rule.</div>
+<div class="opt correct">B. ✓ Correct — Correct — it limits how much can move into the tax-free retirement phase.</div>
+<div class="opt incorrect">C. ✗ Incorrect — Member numbers are governed by separate rules, not the transfer balance cap.</div>
+<div class="opt incorrect">D. ✗ Incorrect — Insurance cover isn't governed by the transfer balance cap.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">An SMSF's investment strategy must, at minimum, address:</div>
+<ol><li>Only the fund's expected investment returns</li>
+<li>Diversification, liquidity, risk/return, and insurance for members</li>
+<li>Only which financial adviser will be used</li>
+<li>Only the fund's tax obligations</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Expected returns alone aren't sufficient.</div>
+<div class="opt correct">B. ✓ Correct — Correct — these are the minimum matters an investment strategy must address.</div>
+<div class="opt incorrect">C. ✗ Incorrect — Adviser selection isn't part of the investment strategy requirement.</div>
+<div class="opt incorrect">D. ✗ Incorrect — Tax obligations alone don't satisfy the investment strategy requirement.</div></div>
 </details>
 </div>
 </div></section><section id="section-10"><h2><span class="num">10</span>Factual, General &amp; Personal Advice</h2>
@@ -913,7 +1435,7 @@ An adviser gives a seminar and says "growth assets tend to outperform over the l
 </div></section><section id="section-11"><h2><span class="num">11</span>Who Can Advise on What: Mortgages, Insurance &amp; Credit</h2>
 <p>This hinges on the definition of <strong>"relevant financial product"</strong> — it determines who needs to be a FASEA-qualified relevant provider.</p>
 <h3><span class="tag blue">Relevant financial products</span>Life insurance, super, SMSF, investments</h3>
-<p>Must be advised on by a <strong>relevant provider</strong>: AFSL holder or authorised representative, listed on ASIC's Financial Advisers Register, FASEA-qualified (degree, exam, Code of Ethics, CPD). This is the adviser role you and Nathan are training for.</p>
+<p>Must be advised on by a <strong>relevant provider</strong>: Australian Financial Services Licence (AFSL) holder or authorised representative, listed on ASIC's Financial Advisers Register, FASEA-qualified (degree, exam, Code of Ethics, and CPD — ongoing Continuing Professional Development). This is the adviser role you and Nathan are training for.</p>
 <h3><span class="tag green">Excluded product</span>General insurance — car, home, contents, travel</h3>
 <p>General insurance is specifically <strong>excluded</strong> from the "relevant financial product" definition, so it doesn't trigger the Best Interests Duty, SOA, or FASEA education/exam requirements. It's given by insurance brokers or insurer staff under an AFSL, usually as <strong>general advice</strong>, requiring only <strong>Tier 1 or Tier 2 (RG146)</strong> training rather than full adviser qualifications.</p>
 <h3><span class="tag orange">Different Act entirely</span>Mortgages &amp; car loans (credit products)</h3>
@@ -921,6 +1443,14 @@ An adviser gives a seminar and says "growth assets tend to outperform over the l
 <div class="q"><div class="label">Worked Example</div>
 Nathan gives a client general advice on comprehensive car insurance and mentions a good mortgage broker for their home loan. Does he need to be a relevant provider for either?
 <div class="ans">No to both — general insurance is excluded from "relevant financial product," and referring to a mortgage broker (rather than advising on the loan terms himself) doesn't require a credit licence. If he wanted to advise on the loan terms himself, he'd need ACL authorisation.</div>
+</div>
+<h3><span class="tag purple">Yet another regime</span>Tax Advice</h3>
+<p><strong>General tax preparation and lodgement</strong> (e.g. income tax returns) requires registration as a <strong>tax agent</strong> (or BAS — Business Activity Statement — agent for BAS-related work) with the <strong>Tax Practitioners Board (TPB)</strong> under the <strong>Tax Agent Services Act 2009 (TASA)</strong> — this is accountant territory, not financial adviser territory.</p>
+<p><strong>Tax (financial) advice</strong> — tax advice that's incidental to financial product advice (e.g. explaining the tax impact of a super contribution or pension strategy) — can be given by a <strong>relevant provider</strong> without separate TPB registration, provided they're a "qualified tax relevant provider" and their licensee has notified the TPB. Since the 2022 reforms, the old standalone "tax (financial) adviser" registration category no longer exists — this now sits inside the adviser's normal AFSL authorisation, though they must still comply with the TASA Code of Conduct as it applies to them.</p>
+<p>A financial adviser generally <strong>can't</strong> prepare or lodge a client's tax return, or give comprehensive tax advice unrelated to financial products, unless they're also a registered tax agent.</p>
+<div class="q"><div class="label">Worked Example</div>
+An adviser explains the tax-free thresholds relevant to a client's pension strategy as part of a broader SOA. Does this require TPB tax agent registration?
+<div class="ans">No — this is "tax (financial) advice," incidental to the financial product advice being given, and is permitted as part of the adviser's normal AFSL authorisation as a qualified tax relevant provider.</div>
 </div>
 <div class="practice">
 <div class="ptitle">Practice — Who Can Advise on What: Mortgages, Insurance &amp; Credit</div>
@@ -989,6 +1519,502 @@ Nathan gives a client general advice on comprehensive car insurance and mentions
 <div class="opt incorrect">D. ✗ Incorrect — Credit licences relate to loans, not insurance.</div></div>
 </details>
 </div>
+<div class="mcq">
+<div class="stem">Who is generally required to be registered with the Tax Practitioners Board to prepare and lodge a client's income tax return?</div>
+<ol><li>Any financial adviser</li>
+<li>A registered tax agent (or BAS agent for BAS-related work)</li>
+<li>Any AFSL holder automatically</li>
+<li>No registration is required</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Financial advisers aren't automatically authorised to prepare and lodge tax returns.</div>
+<div class="opt correct">B. ✓ Correct — Correct — tax return preparation and lodgement requires TPB registration as a tax agent (or BAS agent).</div>
+<div class="opt incorrect">C. ✗ Incorrect — Holding an AFSL doesn't confer tax agent registration.</div>
+<div class="opt incorrect">D. ✗ Incorrect — TPB registration is required for this work.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">What is 'tax (financial) advice'?</div>
+<ol><li>Comprehensive taxation advice unrelated to any financial product</li>
+<li>Tax advice that's incidental to financial product advice (e.g. tax impact of a super strategy)</li>
+<li>Advice only accountants can give</li>
+<li>Advice requiring separate ASIC registration</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — That describes general tax advice, which requires tax agent registration.</div>
+<div class="opt correct">B. ✓ Correct — Correct — it's tax advice that arises incidentally within financial product advice.</div>
+<div class="opt incorrect">C. ✗ Incorrect — Financial advisers can give it too, under the right conditions.</div>
+<div class="opt incorrect">D. ✗ Incorrect — It doesn't require separate ASIC registration; it sits within existing AFSL authorisation.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Since the 2022 reforms, how do relevant providers give tax (financial) advice?</div>
+<ol><li>They must separately register as a tax agent</li>
+<li>As part of their normal AFSL authorisation, provided they're a qualified tax relevant provider and their licensee has notified the TPB</li>
+<li>They cannot give any tax-related advice at all</li>
+<li>Only if they hold a CPA qualification</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Separate tax agent registration is not required for this incidental tax advice.</div>
+<div class="opt correct">B. ✓ Correct — Correct — this replaced the old standalone tax (financial) adviser registration category.</div>
+<div class="opt incorrect">C. ✗ Incorrect — They can give tax (financial) advice under the right conditions.</div>
+<div class="opt incorrect">D. ✗ Incorrect — A CPA qualification isn't the mechanism here.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">A financial adviser explains the tax-free thresholds relevant to a client's pension strategy as part of a broader SOA. This is:</div>
+<ol><li>An unauthorised act requiring TPB tax agent registration</li>
+<li>Tax (financial) advice, permitted as part of the financial advice being given</li>
+<li>Illegal under the Corporations Act</li>
+<li>Only permitted for wholesale clients</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Separate tax agent registration isn't required for this incidental advice.</div>
+<div class="opt correct">B. ✓ Correct — Correct.</div>
+<div class="opt incorrect">C. ✗ Incorrect — This is a normal, permitted part of financial advice.</div>
+<div class="opt incorrect">D. ✗ Incorrect — It's not limited to wholesale clients.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Can a financial adviser (without tax agent registration) prepare and lodge a client's income tax return?</div>
+<ol><li>Yes, always</li>
+<li>No — that requires registration as a tax agent (or BAS agent) with the TPB</li>
+<li>Yes, but only for retail clients</li>
+<li>Yes, but only once a year</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — This isn't permitted without the relevant TPB registration.</div>
+<div class="opt correct">B. ✓ Correct — Correct.</div>
+<div class="opt incorrect">C. ✗ Incorrect — Client tier doesn't change this requirement.</div>
+<div class="opt incorrect">D. ✗ Incorrect — Frequency doesn't change this requirement.</div></div>
+</details>
+</div>
+</div></section><section id="section-12"><h2><span class="num">12</span>Breaches — Who's Responsible</h2>
+<p>When something goes wrong, the exam wants you to identify <em>where the actual failure occurred</em> — that's what determines who's responsible, not just who's easiest to blame.</p>
+<h3>The Three Layers</h3>
+<ul>
+<li><strong>The individual adviser</strong> — personally responsible for the advice they give: following the best interests duty, complying with the Code of Ethics, and following their licensee's compliance procedures on each file.</li>
+<li><strong>The licensee (AFSL holder)</strong> — responsible under s912A of the Corporations Act for having adequate arrangements to supervise and monitor its representatives, provide training, and maintain competent compliance systems. A licensee can be liable even when it wasn't the licensee who gave the bad advice.</li>
+<li><strong>The product issuer</strong> — responsible for the accuracy of the PDS, the TMD, and the product's design. If a problem stems from a flawed disclosure document or product design, liability generally sits with the issuer — not the adviser who reasonably relied on it.</li>
+</ul>
+<div class="q"><div class="label">Worked Example 1</div>
+An adviser doesn't complete a proper fact find and recommends unsuitable insurance to a client. Who's responsible?
+<div class="ans">Primarily the individual adviser — this is a personal best interests duty and Code of Ethics breach. The licensee may also carry some responsibility if its training or supervision was inadequate, and must assess the matter as a possible reportable situation.</div>
+</div>
+<div class="q"><div class="label">Worked Example 2</div>
+A product's PDS understates its fees due to a calculation error made by the issuer. An adviser reasonably relies on the PDS and recommends the product. Who's responsible?
+<div class="ans">The product issuer — the error originates in their disclosure document. The adviser and licensee generally aren't liable if they reasonably relied on the PDS, unless they knew, or should have known, that it was wrong.</div>
+</div>
+<div class="q"><div class="label">Worked Example 3</div>
+A licensee's compliance system fails to flag a pattern of unsuitable advice happening across several advisers. Who's responsible?
+<div class="ans">The licensee — this is a systemic breach of its s912A supervisory obligations, even though the individual advisers involved have also breached their own duties. Both can be responsible at once, for different reasons.</div>
+</div>
+<div class="note">Quick test: ask "did this fail at the point of advice (adviser), at the point of supervision (licensee), or at the point of product/disclosure design (issuer)?" — responsibility can land on more than one layer at once, but each layer is judged on its own failure.</div>
+<div class="practice">
+<div class="ptitle">Practice — Breaches — Who's Responsible</div>
+<div class="mcq">
+<div class="stem">A licensee's obligations under s912A include maintaining adequate arrangements to:</div>
+<ol><li>Guarantee zero client complaints</li>
+<li>Supervise and monitor representatives' compliance</li>
+<li>Set the product issuer's TMD</li>
+<li>Approve every PDS in the market</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — No licensee obligation guarantees zero complaints.</div>
+<div class="opt correct">B. ✓ Correct — Correct — s912A requires adequate supervision and monitoring arrangements.</div>
+<div class="opt incorrect">C. ✗ Incorrect — Setting a TMD is the issuer's job, not the licensee's.</div>
+<div class="opt incorrect">D. ✗ Incorrect — Licensees don't approve every PDS in the market.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">An adviser fails to complete a proper fact find and recommends unsuitable insurance. Who is primarily responsible for this specific conduct breach?</div>
+<ol><li>The product issuer</li>
+<li>The individual adviser</li>
+<li>ASIC</li>
+<li>AFCA</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — The issuer isn't responsible for how the adviser conducted the fact find.</div>
+<div class="opt correct">B. ✓ Correct — Correct — this is a personal conduct failure by the adviser.</div>
+<div class="opt incorrect">C. ✗ Incorrect — ASIC is the regulator, not the responsible party.</div>
+<div class="opt incorrect">D. ✗ Incorrect — AFCA resolves disputes; it isn't the responsible party for the breach itself.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">A product's PDS understates fees due to a calculation error by the issuer, and an adviser reasonably relies on it when recommending the product. Who is primarily responsible?</div>
+<ol><li>The adviser</li>
+<li>The licensee</li>
+<li>The product issuer</li>
+<li>The client</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — The adviser reasonably relied on the PDS and isn't primarily at fault.</div>
+<div class="opt incorrect">B. ✗ Incorrect — The licensee isn't primarily at fault if reliance on the PDS was reasonable.</div>
+<div class="opt correct">C. ✓ Correct — Correct — the error originates in the issuer's own disclosure document.</div>
+<div class="opt incorrect">D. ✗ Incorrect — The client bears no responsibility for a disclosure error.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">A licensee's monitoring system fails to detect a pattern of unsuitable advice across several advisers. This points to a breach by:</div>
+<ol><li>Only the individual advisers</li>
+<li>The licensee's supervisory/compliance systems</li>
+<li>The product issuer</li>
+<li>ASIC</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — The advisers may also be at fault, but 'only' is too narrow given the systemic failure described.</div>
+<div class="opt correct">B. ✓ Correct — Correct — a failure to detect a pattern across multiple advisers points to a supervisory/systems failure at the licensee level.</div>
+<div class="opt incorrect">C. ✗ Incorrect — The product issuer isn't implicated by this scenario.</div>
+<div class="opt incorrect">D. ✗ Incorrect — ASIC is the regulator, not a responsible party here.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Liability for a breach is generally determined by:</div>
+<ol><li>Whichever entity has the most money</li>
+<li>Where the actual failure occurred — conduct, supervision, or product/disclosure</li>
+<li>Always the licensee regardless of the facts</li>
+<li>Always the individual adviser regardless of the facts</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Liability isn't determined by capacity to pay.</div>
+<div class="opt correct">B. ✓ Correct — Correct — identify which layer actually failed.</div>
+<div class="opt incorrect">C. ✗ Incorrect — Licensees aren't automatically liable regardless of the facts.</div>
+<div class="opt incorrect">D. ✗ Incorrect — Advisers aren't automatically liable regardless of the facts.</div></div>
+</details>
+</div>
+</div></section><section id="section-13"><h2><span class="num">13</span>Breach Reporting Obligations</h2>
+<p>Since October 2021, breach reporting runs under the <strong>reportable situations regime</strong> (replacing the old breach reporting rules). It sits alongside — and is distinct from — the "who's responsible" question in the previous section.</p>
+<h3>Who Reports, To Whom, By When</h3>
+<table>
+<tr><th>Question</th><th>Answer</th></tr>
+<tr><td>Who reports to ASIC?</td><td>The AFSL licensee — not the individual adviser directly.</td></tr>
+<tr><td>What does the adviser do first?</td><td>Notify their licensee as soon as practicable once they identify a possible reportable situation.</td></tr>
+<tr><td>Reporting deadline?</td><td>Within <strong>30 calendar days</strong> of the licensee first knowing, or being reckless as to whether, a reportable situation has occurred.</td></tr>
+<tr><td>Who else can situations be reported about?</td><td>In some circumstances, licensees must report reportable situations about <em>other</em> licensees too (e.g. when ending a rep's authorisation over misconduct).</td></tr>
+</table>
+<h3>What Makes a Breach "Significant"</h3>
+<ul>
+<li>The number of clients affected.</li>
+<li>The extent of loss or damage caused.</li>
+<li>Whether it points to a broader, systemic issue rather than an isolated error.</li>
+<li>The seriousness of the underlying conduct.</li>
+</ul>
+<h3>Breach Reporting vs AFCA</h3>
+<p>These are separate mechanisms. <strong>AFCA</strong> resolves individual client disputes (external dispute resolution) — a client can complain and win compensation without that automatically becoming an ASIC report. <strong>Breach reporting</strong> is the licensee's own obligation to self-report significant issues to the regulator. A pattern of AFCA complaints, though, can itself be a sign of a systemic issue that <em>does</em> need to be reported.</p>
+<div class="q"><div class="label">Worked Example 1</div>
+An adviser realises they've been omitting a required disclosure across roughly 40 client files over six months. What should happen?
+<div class="ans">The adviser notifies their licensee as soon as practicable. The licensee then assesses significance (number of clients, potential harm, systemic nature) — if significant, the licensee must report it to ASIC within 30 calendar days.</div>
+</div>
+<div class="q"><div class="label">Worked Example 2</div>
+A client complains to AFCA about unsuitable advice and AFCA rules in the client's favour. Does this automatically trigger an ASIC breach report?
+<div class="ans">Not automatically — but the licensee should still assess whether the AFCA outcome reveals a systemic issue or a significant breach that needs to be separately reported under the reportable situations regime.</div>
+</div>
+<div class="practice">
+<div class="ptitle">Practice — Breach Reporting Obligations</div>
+<div class="mcq">
+<div class="stem">Under the reportable situations regime, who is responsible for reporting to ASIC?</div>
+<ol><li>The individual adviser directly</li>
+<li>The AFSL licensee</li>
+<li>The client</li>
+<li>AFCA</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Individual advisers report internally to their licensee, not directly to ASIC.</div>
+<div class="opt correct">B. ✓ Correct — Correct — the licensee is responsible for reporting to ASIC.</div>
+<div class="opt incorrect">C. ✗ Incorrect — Clients aren't part of the reporting chain.</div>
+<div class="opt incorrect">D. ✗ Incorrect — AFCA handles disputes, not breach reporting to ASIC.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Within what timeframe must a licensee report a reportable situation to ASIC?</div>
+<ol><li>24 hours</li>
+<li>10 business days</li>
+<li>30 calendar days</li>
+<li>90 calendar days</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Too short a period.</div>
+<div class="opt incorrect">B. ✗ Incorrect — Too short a period.</div>
+<div class="opt correct">C. ✓ Correct — Correct — 30 calendar days from when the licensee knew, or was reckless as to whether, a reportable situation occurred.</div>
+<div class="opt incorrect">D. ✗ Incorrect — Too long a period.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">An adviser identifies a possible reportable situation. What should they do first?</div>
+<ol><li>Report directly to ASIC</li>
+<li>Notify their AFSL licensee as soon as practicable</li>
+<li>Wait for a client complaint before doing anything</li>
+<li>Report directly to AFCA</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Advisers report internally to their licensee first, not directly to ASIC.</div>
+<div class="opt correct">B. ✓ Correct — Correct — the licensee needs to be notified as soon as practicable so it can assess and report if required.</div>
+<div class="opt incorrect">C. ✗ Incorrect — Waiting for a complaint isn't the correct process — self-identification still triggers the obligation.</div>
+<div class="opt incorrect">D. ✗ Incorrect — AFCA isn't the reporting pathway for reportable situations.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Which of these is a factor in deciding whether a breach is 'significant' enough to report?</div>
+<ol><li>The adviser's years of experience</li>
+<li>The number of clients affected and whether it indicates a systemic issue</li>
+<li>The adviser's postcode</li>
+<li>The time of year it occurred</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Experience level isn't a significance factor.</div>
+<div class="opt correct">B. ✓ Correct — Correct — scale of impact and systemic nature are core significance factors.</div>
+<div class="opt incorrect">C. ✗ Incorrect — Location isn't a significance factor.</div>
+<div class="opt incorrect">D. ✗ Incorrect — Timing isn't a significance factor.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Does a client winning an AFCA complaint automatically trigger a report to ASIC?</div>
+<ol><li>Yes, always automatic</li>
+<li>No, but the licensee should assess whether it reveals a systemic or significant issue requiring a report</li>
+<li>Only if the client requests it</li>
+<li>Only if the amount exceeds $1 million</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — It isn't automatic — the two mechanisms are separate.</div>
+<div class="opt correct">B. ✓ Correct — Correct — the licensee still needs to assess it against the reportable situations criteria.</div>
+<div class="opt incorrect">C. ✗ Incorrect — The client's preference doesn't determine the licensee's reporting obligation.</div>
+<div class="opt incorrect">D. ✗ Incorrect — There's no such monetary threshold rule.</div></div>
+</details>
+</div>
+</div></section><section id="section-14"><h2><span class="num">14</span>Conflicted Remuneration &amp; Soft Dollar Benefits</h2>
+<h3>What Counts as Conflicted Remuneration</h3>
+<p>Under <strong>s963A</strong> of the Corporations Act, conflicted remuneration is any benefit given to a licensee or representative that could reasonably be expected to influence the advice given, or the products recommended.</p>
+<h3>Generally Banned</h3>
+<ul>
+<li>Commissions on investment and superannuation products.</li>
+<li>Volume-based payments or bonuses tied to sales targets or the volume of business placed with a particular product provider ("shelf-space" fees).</li>
+<li>Soft dollar benefits above the minimal threshold, especially if tied to volume or conditional on recommending particular products.</li>
+</ul>
+<h3>Generally Permitted</h3>
+<ul>
+<li>General insurance commissions.</li>
+<li>Life risk insurance commissions, capped under the Life Insurance Framework (LIF).</li>
+<li>Fee for service paid directly by the client — not conflicted, since it doesn't depend on which product is recommended.</li>
+<li>Non-monetary benefits below the minimal threshold that don't influence advice (e.g. genuinely educational training).</li>
+</ul>
+<h3>Four Types of "Rewards" Worth Distinguishing</h3>
+<ul>
+<li><strong>Soft dollar benefits</strong> — non-cash perks like conference attendance, subsidised training, entertainment, or gifts from product providers. Must be recorded in a soft dollar benefits register once above a minimal threshold, and must not be tied to volume or influence advice.</li>
+<li><strong>Volume-based (shelf-space) rewards</strong> — payments from a product provider to a licensee based on total funds under management or sales volume placed with that provider. Generally banned, since it directly rewards steering business toward one provider.</li>
+<li><strong>Rewards from the licensee itself</strong> — internal bonuses, KPIs, or promotion tied to selling in-house or proprietary products. This is a <strong>vertical integration</strong> risk (where the same corporate group owns both the advice business and the products being recommended) flagged repeatedly by the 2018–19 Royal Commission into misconduct in the banking and financial services industry — can be conflicted remuneration if not carefully managed.</li>
+<li><strong>Rewards from product or ETF providers</strong> — fund managers or ETF issuers offering research trips, sponsorships, or co-branded marketing funding. Only permissible if genuinely non-conflicted: education-focused, not tied to sales, below thresholds, and properly disclosed.</li>
+</ul>
+<div class="q"><div class="label">Worked Example</div>
+A fund manager pays a licensee a bonus calculated as a percentage of total client funds placed into its products across the year. Is this conflicted remuneration?
+<div class="ans">Yes — this is a volume-based/shelf-space payment. It directly rewards the licensee for steering more business toward that provider, regardless of whether it's actually the best option for each client, and is generally banned.</div>
+</div>
+<h3>Ethical Discussion Questions</h3>
+<ul>
+<li>If a soft dollar benefit sits below the disclosure threshold, does that make it ethically fine — or just legally exempt from the register requirement?</li>
+<li>Can an adviser genuinely stay objective after accepting hospitality from a product provider, even if they believe they can?</li>
+<li>Would disclosure alone be enough to manage a volume-based reward, or does the conflict need to be removed entirely?</li>
+<li>How should a licensee's internal reward structure (KPIs, bonuses) be designed so it doesn't quietly steer advisers toward proprietary products?</li>
+<li>Where's the line between legitimate professional development and a disguised inducement?</li>
+</ul>
+<div class="practice">
+<div class="ptitle">Practice — Conflicted Remuneration &amp; Soft Dollar Benefits</div>
+<div class="mcq">
+<div class="stem">Under s963A, conflicted remuneration is best defined as:</div>
+<ol><li>Any payment made by a client to their adviser</li>
+<li>Any benefit that could reasonably be expected to influence the advice given or products recommended</li>
+<li>Any commission on general insurance</li>
+<li>Any fee disclosed in an FSG</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Client-paid fees for service aren't conflicted remuneration in the way this concept is defined.</div>
+<div class="opt correct">B. ✓ Correct — Correct — this is the statutory test.</div>
+<div class="opt incorrect">C. ✗ Incorrect — General insurance commissions are generally permitted, not the definition of conflicted remuneration.</div>
+<div class="opt incorrect">D. ✗ Incorrect — Disclosure in an FSG doesn't define what conflicted remuneration is.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Which of these is generally banned as conflicted remuneration?</div>
+<ol><li>Fee for service paid directly by the client</li>
+<li>Volume-based payments tied to sales placed with a particular product provider</li>
+<li>General insurance commissions</li>
+<li>Life risk insurance commissions within LIF caps</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Fee for service isn't conflicted — it doesn't depend on which product is recommended.</div>
+<div class="opt correct">B. ✓ Correct — Correct — volume-based/shelf-space payments are generally banned.</div>
+<div class="opt incorrect">C. ✗ Incorrect — General insurance commissions are generally permitted.</div>
+<div class="opt incorrect">D. ✗ Incorrect — LIF-capped life risk commissions are permitted.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">A fund manager pays a licensee a bonus based on the percentage of client funds placed into its products. This is:</div>
+<ol><li>A legitimate marketing partnership</li>
+<li>A volume-based/shelf-space payment, generally banned as conflicted remuneration</li>
+<li>A soft dollar benefit exempt from all rules</li>
+<li>A permitted fee for service</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — This isn't a legitimate exemption — it's a classic conflicted remuneration structure.</div>
+<div class="opt correct">B. ✓ Correct — Correct.</div>
+<div class="opt incorrect">C. ✗ Incorrect — Soft dollar benefits are never exempt from all rules; thresholds and registers still apply.</div>
+<div class="opt incorrect">D. ✗ Incorrect — This isn't fee for service — it doesn't come directly from the client.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Soft dollar benefits above the minimal threshold must generally be:</div>
+<ol><li>Ignored, since they're non-cash</li>
+<li>Recorded in a soft dollar benefits register, and must not be tied to volume or influence advice</li>
+<li>Automatically banned regardless of amount</li>
+<li>Only disclosed if the client asks</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Non-cash doesn't mean exempt from tracking obligations.</div>
+<div class="opt correct">B. ✓ Correct — Correct.</div>
+<div class="opt incorrect">C. ✗ Incorrect — They're not automatically banned outright — the issue is whether they're tied to volume/influence.</div>
+<div class="opt incorrect">D. ✗ Incorrect — There's a proactive register requirement, not just an on-request disclosure.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Why are a licensee's internal KPIs tied to selling proprietary (in-house) products a conflicted remuneration risk?</div>
+<ol><li>They aren't a risk at all</li>
+<li>They can quietly steer advisers toward products that benefit the licensee rather than the client, a key issue flagged by the Royal Commission</li>
+<li>They only matter for general insurance</li>
+<li>They're only relevant to wholesale clients</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — This is a well-documented risk, not a non-issue.</div>
+<div class="opt correct">B. ✓ Correct — Correct — this is the vertical integration concern.</div>
+<div class="opt incorrect">C. ✗ Incorrect — This risk applies broadly, not just to general insurance.</div>
+<div class="opt incorrect">D. ✗ Incorrect — This risk applies regardless of client classification.</div></div>
+</details>
+</div>
+</div></section><section id="section-15"><h2><span class="num">15</span>Left Field Bullshit Questions</h2>
+<p>Every FASEA-style exam has a handful of questions that aren't really testing whether you know the content — they're testing whether you can read carefully under pressure. Same knowledge, deliberately deployed to trip you up. Here's the taxonomy of tricks, then ten questions built to demonstrate each one.</p>
+<h3>The Trick Taxonomy</h3>
+<ul>
+<li><strong>The "EXCEPT" flip</strong> — "All of the following are X, EXCEPT" makes you hunt for the odd one out in the opposite direction to normal. Easy to rush and pick a right-sounding wrong answer out of habit.</li>
+<li><strong>The red herring scenario</strong> — extra scenario detail (day of the week, appointment length, unrelated small talk) that has zero bearing on the answer, included purely to see if you can filter signal from noise.</li>
+<li><strong>The double negative</strong> — "Which of the following would NOT be considered inconsistent with..." Your brain often skips the "NOT" and answers the opposite question.</li>
+<li><strong>The "disclosure fixes everything" trap</strong> — disclosure is necessary in many contexts, but for banned conflicted remuneration, disclosure doesn't cure it. Don't assume disclosure is always the answer.</li>
+<li><strong>The "MOST correct" trap</strong> — two or three options are technically defensible, but one is clearly the primary, most direct fit. FASEA wants the best answer, not just a true one.</li>
+<li><strong>The absolute word trap</strong> — "always," "never," "guarantees," "only." Real regulatory frameworks are full of exceptions; an option using absolute language is very often the wrong one.</li>
+<li><strong>The close-number trap</strong> — wrong answers placed suspiciously near the real figure (5 vs 10 vs 14 business days). Know your exact numbers rather than "vibing" a close one.</li>
+<li><strong>The "nothing's actually wrong here" trap</strong> — some scenarios describe someone doing everything correctly. The question primes you to hunt for a breach that doesn't exist. Sometimes the right answer is that nothing went wrong.</li>
+<li><strong>The same-name, different-regime trap</strong> — "best interests duty" exists for financial advisers (s961B) AND mortgage brokers (NCCP) as two legally distinct concepts that happen to share a name.</li>
+</ul>
+<div class="note">The fix for all of these is the same: read the question twice, identify which trick (if any) is being used, and answer the question that's actually being asked — not the one you assumed was being asked.</div>
+<div class="practice">
+<div class="ptitle">Practice — Left Field Bullshit Questions</div>
+<div class="mcq">
+<div class="stem">All of the following are excluded from the definition of 'relevant financial product', EXCEPT:</div>
+<ol><li>General insurance</li>
+<li>Basic banking products</li>
+<li>Life insurance</li>
+<li>Non-cash payment products</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — General insurance is excluded — not the answer to an EXCEPT question.</div>
+<div class="opt incorrect">B. ✗ Incorrect — Basic banking products are excluded — not the answer to an EXCEPT question.</div>
+<div class="opt correct">C. ✓ Correct — Correct — life insurance IS a relevant financial product; it's the one NOT excluded. This is the EXCEPT flip: you're hunting for what doesn't belong to the excluded group.</div>
+<div class="opt incorrect">D. ✗ Incorrect — Non-cash payment products are excluded — not the answer to an EXCEPT question.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">An adviser meets a client for a two-hour appointment on a Friday afternoon, chats about their upcoming overseas holiday, then recommends increasing income protection cover given the client's new job involves more travel. Is this personal advice?</div>
+<ol><li>No, because it happened on a Friday afternoon</li>
+<li>No, because holidays aren't relevant to insurance</li>
+<li>Yes — the recommendation considers the client's actual circumstances</li>
+<li>Only if the appointment lasted over an hour</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — The day of the week is a red herring with zero legal relevance.</div>
+<div class="opt incorrect">B. ✗ Incorrect — The holiday chat is a red herring too — irrelevant small talk included as noise.</div>
+<div class="opt correct">C. ✓ Correct — Correct — the personal advice test is about whether the client's actual circumstances were considered, which they clearly were (their new job's travel demands).</div>
+<div class="opt incorrect">D. ✗ Incorrect — Appointment length is another red herring — duration doesn't determine advice classification.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Which of the following would NOT be considered inconsistent with the sole purpose test?</div>
+<ol><li>An SMSF buying a rental property later occupied rent-free by a member's adult child</li>
+<li>An SMSF purchasing units in a widely-held, unrelated commercial property trust</li>
+<li>An SMSF lending money to a member's business at below-market interest</li>
+<li>A trustee using fund-owned artwork to decorate their home</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — This is a breach (personal use by a related party) — the question asks for what's NOT a breach, so this is wrong.</div>
+<div class="opt correct">B. ✓ Correct — Correct — an arm's length investment in a widely-held, unrelated trust is a normal, compliant investment. The double negative in the question ('NOT... inconsistent') means you're looking for the compliant option, not a breach.</div>
+<div class="opt incorrect">C. ✗ Incorrect — This is a breach (non-arm's length dealing) — not the answer to a 'NOT inconsistent' question.</div>
+<div class="opt incorrect">D. ✗ Incorrect — This is a breach (personal use of fund assets) — not the answer to a 'NOT inconsistent' question.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">A client's adviser recommends a super fund that pays the licensee a marketing support payment, which is disclosed in the FSG. Is this conflicted remuneration?</div>
+<ol><li>No, because it was disclosed</li>
+<li>Yes — disclosure alone doesn't stop a benefit tied to influencing advice from being conflicted remuneration</li>
+<li>No, because it's below $1,000</li>
+<li>Yes, but only if the client complains</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — This is the 'disclosure fixes everything' trap — disclosure doesn't cure conflicted remuneration; certain benefits are simply banned regardless of disclosure.</div>
+<div class="opt correct">B. ✓ Correct — Correct — a benefit tied to influencing advice or product recommendations is conflicted remuneration whether or not it's disclosed.</div>
+<div class="opt incorrect">C. ✗ Incorrect — There's no such automatic dollar carve-out that makes a conflicted payment acceptable.</div>
+<div class="opt incorrect">D. ✗ Incorrect — Client complaints have nothing to do with whether something legally qualifies as conflicted remuneration.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Which value is MOST directly engaged when an adviser fails to update a client's risk profile despite five years passing and major life changes?</div>
+<ol><li>Honesty</li>
+<li>Diligence</li>
+<li>Competence</li>
+<li>Trustworthiness</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Nothing untrue has been said — Honesty isn't the primary fit.</div>
+<div class="opt correct">B. ✓ Correct — Correct — this is fundamentally a thoroughness/follow-through failure over time, which is Diligence's territory. Competence and Trustworthiness are defensible secondary reads, but Diligence is the most direct fit for 'the ongoing service wasn't kept up.'</div>
+<div class="opt incorrect">C. ✗ Incorrect — A knowledge/skill gap isn't described here — the adviser presumably knows they should update it.</div>
+<div class="opt incorrect">D. ✗ Incorrect — A single lapse (even a long one) doesn't necessarily establish an unreliability pattern the way Diligence directly captures the thoroughness failure.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">Under the reportable situations regime, which of the following is TRUE?</div>
+<ol><li>Only breaches affecting more than 10 clients must be reported</li>
+<li>A licensee can be required to report a reportable situation about a different licensee in certain circumstances</li>
+<li>Individual advisers report directly to ASIC</li>
+<li>Reports are voluntary</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — There's no fixed client-count threshold like this — significance is assessed on multiple factors, not a hard number.</div>
+<div class="opt correct">B. ✓ Correct — Correct — this is the easily-missed nuance: the regime isn't purely self-reporting, it can require reporting about other licensees in specific circumstances (e.g. ending a rep's authorisation over misconduct).</div>
+<div class="opt incorrect">C. ✗ Incorrect — Advisers report internally to their licensee first — the licensee reports to ASIC.</div>
+<div class="opt incorrect">D. ✗ Incorrect — Reporting is mandatory, not voluntary, once the criteria are met.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">A distributor identifies a significant dealing outside a product's TMD. Within how many business days must they notify the issuer?</div>
+<ol><li>5</li>
+<li>10</li>
+<li>14</li>
+<li>20</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — Close, but not the actual figure — a classic close-number trap.</div>
+<div class="opt correct">B. ✓ Correct — Correct — 10 business days is the actual requirement.</div>
+<div class="opt incorrect">C. ✗ Incorrect — Close, but not the actual figure — a classic close-number trap.</div>
+<div class="opt incorrect">D. ✗ Incorrect — Close, but not the actual figure — a classic close-number trap.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">An adviser genuinely believes, after reasonable inquiry, that a client's needs are best served by a product outside its TMD, documents the reasoning thoroughly, and reports the significant dealing to the issuer as required. Has anything gone wrong here?</div>
+<ol><li>Yes — recommending outside a TMD is never allowed</li>
+<li>No — this is exactly the correct process when a genuine, well-documented, reported significant dealing occurs</li>
+<li>Yes — the client should have been reclassified as wholesale</li>
+<li>Yes — this requires ASIC pre-approval</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — 'Never allowed' is the absolute-word trap — dealings outside a TMD are permitted when justified, documented, and reported.</div>
+<div class="opt correct">B. ✓ Correct — Correct — this scenario describes someone doing everything right. The question is primed to make you hunt for a problem that doesn't exist; sometimes the right answer is that nothing went wrong.</div>
+<div class="opt incorrect">C. ✗ Incorrect — TMD dealings have nothing to do with wholesale/retail reclassification.</div>
+<div class="opt incorrect">D. ✗ Incorrect — There's no ASIC pre-approval requirement for individual TMD dealings.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">An adviser recommends a product marginally outside its TMD for one client — an isolated, one-off case with no discernible pattern or harm. Must this always be reported to the issuer as a 'significant dealing'?</div>
+<ol><li>Yes, always, regardless of scale</li>
+<li>Only if it's assessed as significant — factors include client numbers affected, potential harm, and whether it's part of a broader pattern</li>
+<li>No, isolated dealings are never reportable</li>
+<li>Only if the client complains</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — 'Always, regardless of scale' is the absolute-word trap — significance is always assessed, not automatic.</div>
+<div class="opt correct">B. ✓ Correct — Correct — whether a dealing is 'significant' depends on an assessment against multiple factors, not an automatic yes/no rule.</div>
+<div class="opt incorrect">C. ✗ Incorrect — 'Never' is also an absolute-word trap in the other direction — isolated dealings can still be reportable if the assessment says so.</div>
+<div class="opt incorrect">D. ✗ Incorrect — Client complaints aren't the trigger for this assessment.</div></div>
+</details>
+</div>
+<div class="mcq">
+<div class="stem">A mortgage broker's 'best interests duty' under the NCCP framework is:</div>
+<ol><li>Identical to s961B for financial advisers</li>
+<li>A separate duty under credit law, distinct from the Corporations Act regime</li>
+<li>Only applicable to wholesale borrowers</li>
+<li>Enforced by FASEA</li></ol>
+<details><summary>Show answer &amp; explanation</summary>
+<div class="explain"><div class="opt incorrect">A. ✗ Incorrect — This is the same-name, different-regime trap — they share a name but are legally distinct duties under different Acts.</div>
+<div class="opt correct">B. ✓ Correct — Correct — the mortgage broker best interests duty sits under the NCCP framework, separate from s961B.</div>
+<div class="opt incorrect">C. ✗ Incorrect — There's no such wholesale-only limitation on this duty.</div>
+<div class="opt incorrect">D. ✗ Incorrect — FASEA governs financial adviser standards, not credit licensing — this duty isn't enforced by FASEA.</div></div>
+</details>
+</div>
 </div></section>
 
 <div class="divider"></div>
@@ -997,9 +2023,7 @@ Nathan gives a client general advice on comprehensive car insurance and mentions
 <p>Strong spread here, but a few high-yield FASEA areas are worth a follow-up session on:</p>
 <ul>
 <li><strong>Best Interests Duty &amp; Safe Harbour steps</strong> (the 7-step process)</li>
-<li><strong>Conflicted remuneration</strong> — what's banned vs permitted (e.g. general insurance commissions still allowed)</li>
-<li><strong>Breach reporting obligations</strong> under the reportable situations regime / CSLR</li>
-<li><strong>TASA Code of Conduct</strong> (tax/TASA overlap questions)</li>
+<li><strong>TASA Code of Conduct</strong> (the professional conduct obligations tax agents and qualified tax relevant providers must follow)</li>
 <li><strong>Statement of Advice content requirements</strong></li>
 <li><strong>Informed consent for ongoing fees</strong> (fee disclosure statements, renewal notices)</li>
 </ul>
@@ -1008,15 +2032,25 @@ Nathan gives a client general advice on comprehensive car insurance and mentions
 
 <div class="divider"></div>
 <section id="final-quiz" class="quizwrap">
-<h2><span class="num">Q</span>Final Practice Quiz — 30 Questions</h2>
-<p>One question at a time, spread across all 11 sections — easier to page through (or Ctrl+F) than a long scroll. Use Previous/Next to move around; the last question grades the quiz.</p>
+<h2><span class="num">Q</span>Final Practice Quiz</h2>
+<p>One question at a time, drawn from the full question bank and spread across sections — easier to page through (or Ctrl+F) than a long scroll.</p>
+<div class="qz-start" id="qz-start">
+<p>Choose how many questions you want in this run. Each run pulls a fresh random selection from the full bank of 115 questions.</p>
+<div class="qz-len-choices">
+<button class="qz-len-btn" data-n="40"><span class="n">40</span><span class="l">Questions</span></button>
+<button class="qz-len-btn" data-n="80"><span class="n">80</span><span class="l">Questions</span></button>
+</div>
+<p id="qz-len-note" style="margin-top:16px;font-size:12px;"></p>
+</div>
+<div id="qz-body" style="display:none;">
 <div class="qz-progressbar"><div class="qz-progressbar-fill" id="qz-progressbar-fill"></div></div>
-<div class="qz-progress" id="qz-progress-text">Question 1 of 30</div>
+<div class="qz-progress" id="qz-progress-text">Question 1</div>
 <div id="qz-single-q"></div>
 <div class="qz-nav">
 <button id="qz-prev">Previous</button>
 <div class="qz-nav-spacer"></div>
 <button id="qz-next">Next</button>
+</div>
 </div>
 <div class="qz-result" id="qz-result">
 <div class="score"></div>
@@ -1026,7 +2060,10 @@ Nathan gives a client general advice on comprehensive car insurance and mentions
 <div id="qz-review-rows"></div>
 <div class="qz-review-note">Tap a section name to jump straight back up to it for revision.</div>
 </div>
-<div style="text-align:center;"><button id="qz-retry">Retry Quiz</button></div>
+<div style="text-align:center;">
+<button id="qz-retry">Retry Quiz</button>
+<button id="qz-download">Download Results (PDF)</button>
+</div>
 </div>
 </section>
 
@@ -1034,22 +2071,54 @@ Nathan gives a client general advice on comprehensive car insurance and mentions
 </div>
 <script>
 (function(){
-  var QUIZ = [{"q": "Which Code of Ethics value is about keeping the knowledge and skills needed to give advice that's genuinely fit for the client?", "options": ["Diligence", "Competence", "Trustworthiness", "Honesty"], "correct": 1, "sectionNum": 1, "sectionTitle": "Code of Ethics \u2014 The Five Values"}, {"q": "How are the five Code of Ethics values usually depicted in diagrams?", "options": ["As a ranked hierarchy with Trustworthiness on top", "As five separate categories that never interact", "As overlapping circles that need to be weighed together", "As a sequential checklist to work through"], "correct": 2, "sectionNum": 1, "sectionTitle": "Code of Ethics \u2014 The Five Values"}, {"q": "An adviser doesn't mention a referral fee they receive from a mortgage broker, even though everything they said about the loan itself was accurate. Which value takes the biggest hit?", "options": ["Honesty", "Fairness", "Competence", "Diligence"], "correct": 1, "sectionNum": 1, "sectionTitle": "Code of Ethics \u2014 The Five Values"}, {"q": "An adviser's technical work is fine, but they keep promising to call the client back and never do \u2014 nothing untrue was ever said. If it isn't Honesty, which value is really being tested?", "options": ["Competence", "Trustworthiness", "Fairness", "Diligence"], "correct": 1, "sectionNum": 2, "sectionTitle": "Overlapping Values \u2014 The Elimination Technique"}, {"q": "An adviser clearly understands a client's insurance needs but hurries through the file and misses required checklist steps. If the answer isn't Competence, what is it?", "options": ["Diligence", "Honesty", "Fairness", "Trustworthiness"], "correct": 0, "sectionNum": 2, "sectionTitle": "Overlapping Values \u2014 The Elimination Technique"}, {"q": "There's no conflict of interest anywhere in this scenario \u2014 the adviser simply doesn't understand how the structured product actually works. If it isn't Fairness, what's the real issue?", "options": ["Competence", "Diligence", "Honesty", "Trustworthiness"], "correct": 0, "sectionNum": 2, "sectionTitle": "Overlapping Values \u2014 The Elimination Technique"}, {"q": "Which framework says an action's rightness depends on following rules and duties, not on how things turn out?", "options": ["Consequentialist", "Deontological", "Utilitarian", "Virtue ethics"], "correct": 1, "sectionNum": 3, "sectionTitle": "Deontological vs Consequentialist Ethics"}, {"q": "An adviser skips a proper risk profile, but the client's portfolio happens to perform well anyway. From a deontological standpoint, has a breach occurred?", "options": ["No, because the outcome was good", "Yes, because the duty was breached regardless of outcome", "Only if the client complains", "Only if ASIC audits the file"], "correct": 1, "sectionNum": 3, "sectionTitle": "Deontological vs Consequentialist Ethics"}, {"q": "Which best describes the underlying philosophy of the FASEA Code of Ethics?", "options": ["Consequentialist", "Deontological", "Purely commercial", "Outcome-based only"], "correct": 1, "sectionNum": 3, "sectionTitle": "Deontological vs Consequentialist Ethics"}, {"q": "If a scenario describes an adviser continuing to act despite an obvious conflict of interest, which Standard have they most likely breached?", "options": ["Standard 1", "Standard 3", "Standard 6", "Standard 12"], "correct": 1, "sectionNum": 4, "sectionTitle": "Values & Standards \u2014 Quick Structure"}, {"q": "Which Standard specifically requires advice to be given in good faith, competently, and in the client's best interests?", "options": ["Standard 1", "Standard 5", "Standard 6", "Standard 12"], "correct": 1, "sectionNum": 4, "sectionTitle": "Values & Standards \u2014 Quick Structure"}, {"q": "What is Standard 12 primarily concerned with?", "options": ["Client best interests", "Conflicts of interest", "Upholding and promoting the profession's ethical standards", "AML/CTF compliance"], "correct": 2, "sectionNum": 4, "sectionTitle": "Values & Standards \u2014 Quick Structure"}, {"q": "Who is responsible for creating a Target Market Determination (TMD)?", "options": ["The financial adviser", "The product issuer", "ASIC", "The client"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "If an adviser wants to recommend a product outside its TMD, what must they do?", "options": ["Never do this under any circumstance", "Justify and document the reason", "Only mention it to the client verbally", "Refer the matter to AUSTRAC"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "What best describes the legal status of ASIC Regulatory Guides?", "options": ["Binding law equal to the Corporations Act", "ASIC's guidance on how it interprets and administers the law", "Optional marketing material", "Rules issued by product issuers"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "Which APP gives individuals the right to ask for a copy of their own personal information?", "options": ["APP 6", "APP 11", "APP 12", "APP 13"], "correct": 2, "sectionNum": 6, "sectionTitle": "Australian Privacy Principles (APPs)"}, {"q": "Which APP restricts using or disclosing personal info beyond the purpose it was originally collected for?", "options": ["APP 6", "APP 8", "APP 11", "APP 13"], "correct": 0, "sectionNum": 6, "sectionTitle": "Australian Privacy Principles (APPs)"}, {"q": "Under which APP must an organisation take reasonable steps to ensure an overseas recipient also protects personal information appropriately?", "options": ["APP 6", "APP 8", "APP 9", "APP 11"], "correct": 1, "sectionNum": 6, "sectionTitle": "Australian Privacy Principles (APPs)"}, {"q": "Which of these is binding legislation rather than regulatory guidance?", "options": ["ASIC Regulatory Guides", "Corporations Act 2001", "Industry association newsletters", "Licensee training manuals"], "correct": 1, "sectionNum": 7, "sectionTitle": "Research \u2014 Where the Answers Are"}, {"q": "How should the Code of Ethics 2019 be classified?", "options": ["A voluntary industry pledge", "A legislative instrument setting values and standards for relevant providers", "An ASIC regulatory guide", "A licensee's internal policy"], "correct": 1, "sectionNum": 7, "sectionTitle": "Research \u2014 Where the Answers Are"}, {"q": "When a scenario feels unclear on the exam, what's a good first question to ask yourself?", "options": ["Is this a legal or an ethical obligation?", "Is this a wholesale or retail client?", "Is this general or personal advice?", "Is this life insurance or general insurance?"], "correct": 0, "sectionNum": 7, "sectionTitle": "Research \u2014 Where the Answers Are"}, {"q": "Which document does a wholesale client NOT need to be given?", "options": ["Nothing \u2014 all standard disclosure docs still apply", "A Statement of Advice (SOA)", "A verbal summary only", "None of the above"], "correct": 1, "sectionNum": 8, "sectionTitle": "Wholesale vs Retail Clients"}, {"q": "Under what circumstance can a Record of Advice (ROA) stand in for a Statement of Advice (SOA)?", "options": ["Whenever the client is wholesale", "For 'further advice' where the basis hasn't significantly changed", "Whenever the adviser prefers not to write a full SOA", "Whenever the client requests it, regardless of circumstances"], "correct": 1, "sectionNum": 8, "sectionTitle": "Wholesale vs Retail Clients"}, {"q": "Who does the Best Interests Duty under s961B actually apply to?", "options": ["All advice, regardless of client type", "Personal advice given to retail clients", "General advice only", "Wholesale clients only"], "correct": 1, "sectionNum": 8, "sectionTitle": "Wholesale vs Retail Clients"}, {"q": "What type of advice is given when recommending a client set up an SMSF?", "options": ["General advice only", "Personal advice requiring a full best-interests process", "Factual information", "Advice exempt from the Corporations Act"], "correct": 1, "sectionNum": 9, "sectionTitle": "SMSF &amp; Insurance"}, {"q": "What extra obligation has applied to SMSF advice since 2021?", "options": ["No comparison to other options is required", "Comparing against alternatives such as an APRA-regulated fund", "Mandatory wholesale classification for the client", "Exemption from the best interests duty"], "correct": 1, "sectionNum": 9, "sectionTitle": "SMSF &amp; Insurance"}, {"q": "Simply stating a current interest rate figure, with no opinion attached, is an example of:", "options": ["Personal advice", "General advice", "Factual information", "Financial product advice"], "correct": 2, "sectionNum": 10, "sectionTitle": "Factual, General &amp; Personal Advice"}, {"q": "What must always accompany general advice?", "options": ["A Statement of Advice", "A general advice warning", "A Product Disclosure Statement only", "Nothing additional"], "correct": 1, "sectionNum": 10, "sectionTitle": "Factual, General &amp; Personal Advice"}, {"q": "How is general insurance (like car or home cover) treated under the 'relevant financial product' definition?", "options": ["It's a relevant financial product requiring a FASEA-qualified adviser", "It's excluded from the 'relevant financial product' definition", "It's regulated under the NCCP Act", "It can only be sold by financial advisers"], "correct": 1, "sectionNum": 11, "sectionTitle": "Who Can Advise on What: Mortgages, Insurance &amp; Credit"}, {"q": "What licence does a mortgage broker need to hold, or operate under?", "options": ["An AFSL", "An Australian Credit Licence (ACL)", "A Tier 2 RG146 qualification only", "No licence at all"], "correct": 1, "sectionNum": 11, "sectionTitle": "Who Can Advise on What: Mortgages, Insurance &amp; Credit"}];
-  var total = QUIZ.length;
+  var FULL_POOL = [{"q": "Which Code of Ethics value is about keeping the knowledge and skills needed to give advice that's genuinely fit for the client?", "options": ["Diligence", "Competence", "Trustworthiness", "Honesty"], "correct": 1, "sectionNum": 1, "sectionTitle": "Code of Ethics \u2014 The Five Values"}, {"q": "How are the five Code of Ethics values usually depicted in diagrams?", "options": ["As a ranked hierarchy with Trustworthiness on top", "As five separate categories that never interact", "As overlapping circles that need to be weighed together", "As a sequential checklist to work through"], "correct": 2, "sectionNum": 1, "sectionTitle": "Code of Ethics \u2014 The Five Values"}, {"q": "An adviser doesn't mention a referral fee they receive from a mortgage broker, even though everything they said about the loan itself was accurate. Which value takes the biggest hit?", "options": ["Honesty", "Fairness", "Competence", "Diligence"], "correct": 1, "sectionNum": 1, "sectionTitle": "Code of Ethics \u2014 The Five Values"}, {"q": "Which statement correctly describes how the five values relate to the Code's 12 Standards?", "options": ["They underpin only the first three Standards", "They underpin the entire set of 12 Standards", "They only relate to the best interests duty", "They apply only to conduct outside of work"], "correct": 1, "sectionNum": 1, "sectionTitle": "Code of Ethics \u2014 The Five Values"}, {"q": "One of these four terms is NOT actually one of FASEA's five Code of Ethics values \u2014 which one?", "options": ["Diligence", "Fairness", "Objectivity", "Trustworthiness"], "correct": 2, "sectionNum": 1, "sectionTitle": "Code of Ethics \u2014 The Five Values"}, {"q": "An adviser's technical work is fine, but they keep promising to call the client back and never do \u2014 nothing untrue was ever said. If it isn't Honesty, which value is really being tested?", "options": ["Competence", "Trustworthiness", "Fairness", "Diligence"], "correct": 1, "sectionNum": 2, "sectionTitle": "Overlapping Values \u2014 The Elimination Technique"}, {"q": "An adviser clearly understands a client's insurance needs but hurries through the file and misses required checklist steps. If the answer isn't Competence, what is it?", "options": ["Diligence", "Honesty", "Fairness", "Trustworthiness"], "correct": 0, "sectionNum": 2, "sectionTitle": "Overlapping Values \u2014 The Elimination Technique"}, {"q": "There's no conflict of interest anywhere in this scenario \u2014 the adviser simply doesn't understand how the structured product actually works. If it isn't Fairness, what's the real issue?", "options": ["Competence", "Diligence", "Honesty", "Trustworthiness"], "correct": 0, "sectionNum": 2, "sectionTitle": "Overlapping Values \u2014 The Elimination Technique"}, {"q": "An adviser incorrectly tells a client a warrant can't lose more than the amount invested \u2014 not to deceive them, but because they don't fully understand how warrants work. If it isn't Honesty, which value applies?", "options": ["Competence", "Diligence", "Fairness", "Trustworthiness"], "correct": 0, "sectionNum": 2, "sectionTitle": "Overlapping Values \u2014 The Elimination Technique"}, {"q": "This adviser is normally completely reliable, but on one occasion recommends their own related-party fund over a clearly better option, without mentioning the connection. If it isn't Trustworthiness \u2014 since this is a one-off, not a pattern \u2014 what value is in play?", "options": ["Fairness", "Competence", "Diligence", "Honesty"], "correct": 0, "sectionNum": 2, "sectionTitle": "Overlapping Values \u2014 The Elimination Technique"}, {"q": "Which framework says an action's rightness depends on following rules and duties, not on how things turn out?", "options": ["Consequentialist", "Deontological", "Utilitarian", "Virtue ethics"], "correct": 1, "sectionNum": 3, "sectionTitle": "Deontological vs Consequentialist Ethics"}, {"q": "An adviser skips a proper risk profile, but the client's portfolio happens to perform well anyway. From a deontological standpoint, has a breach occurred?", "options": ["No, because the outcome was good", "Yes, because the duty was breached regardless of outcome", "Only if the client complains", "Only if ASIC audits the file"], "correct": 1, "sectionNum": 3, "sectionTitle": "Deontological vs Consequentialist Ethics"}, {"q": "Which best describes the underlying philosophy of the FASEA Code of Ethics?", "options": ["Consequentialist", "Deontological", "Purely commercial", "Outcome-based only"], "correct": 1, "sectionNum": 3, "sectionTitle": "Deontological vs Consequentialist Ethics"}, {"q": "When an exam scenario shows a good result reached through a dubious process, what is it actually testing?", "options": ["Whether you'll excuse the process because of the good result", "Whether you can identify that the process/duty breach still matters", "Whether the adviser deserves a promotion", "Whether the scenario is even relevant"], "correct": 1, "sectionNum": 3, "sectionTitle": "Deontological vs Consequentialist Ethics"}, {"q": "A strict consequentialist would mainly want to know:", "options": ["Did the adviser follow the rules?", "What was the result of the action?", "Was the adviser honest?", "Was the adviser diligent?"], "correct": 1, "sectionNum": 3, "sectionTitle": "Deontological vs Consequentialist Ethics"}, {"q": "If a scenario describes an adviser continuing to act despite an obvious conflict of interest, which Standard have they most likely breached?", "options": ["Standard 1", "Standard 3", "Standard 6", "Standard 12"], "correct": 1, "sectionNum": 4, "sectionTitle": "Values & Standards \u2014 Quick Structure"}, {"q": "Which Standard specifically requires advice to be given in good faith, competently, and in the client's best interests?", "options": ["Standard 1", "Standard 5", "Standard 6", "Standard 12"], "correct": 1, "sectionNum": 4, "sectionTitle": "Values & Standards \u2014 Quick Structure"}, {"q": "What is Standard 12 primarily concerned with?", "options": ["Client best interests", "Conflicts of interest", "Upholding and promoting the profession's ethical standards", "AML/CTF compliance"], "correct": 2, "sectionNum": 4, "sectionTitle": "Values & Standards \u2014 Quick Structure"}, {"q": "How should Nathan think about the relationship between the 12 Standards and the 5 values?", "options": ["The Standards replace the values entirely", "The Standards exist independently of the values", "The Standards are specific, testable rules that flow from the values", "The Standards are optional guidance only"], "correct": 2, "sectionNum": 4, "sectionTitle": "Values & Standards \u2014 Quick Structure"}, {"q": "For exam purposes, what's more useful than memorising all 12 Standards word-for-word?", "options": ["Knowing the standard numbers in reverse order", "Being able to identify which standard a scenario breaches", "Ignoring the standards in favour of the values only", "Nothing \u2014 word-for-word memorisation is essential"], "correct": 1, "sectionNum": 4, "sectionTitle": "Values & Standards \u2014 Quick Structure"}, {"q": "Who is responsible for creating a Target Market Determination (TMD)?", "options": ["The financial adviser", "The product issuer", "ASIC", "The client"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "If an adviser wants to recommend a product outside its TMD, what must they do?", "options": ["Never do this under any circumstance", "Justify and document the reason", "Only mention it to the client verbally", "Refer the matter to AUSTRAC"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "What best describes the legal status of ASIC Regulatory Guides?", "options": ["Binding law equal to the Corporations Act", "ASIC's guidance on how it interprets and administers the law", "Optional marketing material", "Rules issued by product issuers"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "What is the core practical AML/CTF obligation for a financial adviser?", "options": ["Provide a PDS to every client", "Verify client identity (KYC) before providing designated services", "Lodge a TMD with ASIC", "Complete a Statement of Advice"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "Which topic does ASIC's RG 246 specifically cover?", "options": ["Licensing conduct and disclosure", "General and scaled advice", "Conflicted remuneration", "AML/CTF client identification"], "correct": 2, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "Which APP gives individuals the right to ask for a copy of their own personal information?", "options": ["APP 6", "APP 11", "APP 12", "APP 13"], "correct": 2, "sectionNum": 6, "sectionTitle": "Australian Privacy Principles (APPs)"}, {"q": "Which APP restricts using or disclosing personal info beyond the purpose it was originally collected for?", "options": ["APP 6", "APP 8", "APP 11", "APP 13"], "correct": 0, "sectionNum": 6, "sectionTitle": "Australian Privacy Principles (APPs)"}, {"q": "Under which APP must an organisation take reasonable steps to ensure an overseas recipient also protects personal information appropriately?", "options": ["APP 6", "APP 8", "APP 9", "APP 11"], "correct": 1, "sectionNum": 6, "sectionTitle": "Australian Privacy Principles (APPs)"}, {"q": "Which APP stops an organisation adopting a government identifier (like a TFN or Medicare number) as its own client reference?", "options": ["APP 3", "APP 8", "APP 9", "APP 11"], "correct": 2, "sectionNum": 6, "sectionTitle": "Australian Privacy Principles (APPs)"}, {"q": "A client asks you to fix an outdated address on file \u2014 which APP covers this request?", "options": ["APP 3", "APP 10", "APP 12", "APP 13"], "correct": 3, "sectionNum": 6, "sectionTitle": "Australian Privacy Principles (APPs)"}, {"q": "Which of these is binding legislation rather than regulatory guidance?", "options": ["ASIC Regulatory Guides", "Corporations Act 2001", "Industry association newsletters", "Licensee training manuals"], "correct": 1, "sectionNum": 7, "sectionTitle": "Research \u2014 Where the Answers Are"}, {"q": "How should the Code of Ethics 2019 be classified?", "options": ["A voluntary industry pledge", "A legislative instrument setting values and standards for relevant providers", "An ASIC regulatory guide", "A licensee's internal policy"], "correct": 1, "sectionNum": 7, "sectionTitle": "Research \u2014 Where the Answers Are"}, {"q": "When a scenario feels unclear on the exam, what's a good first question to ask yourself?", "options": ["Is this a legal or an ethical obligation?", "Is this a wholesale or retail client?", "Is this general or personal advice?", "Is this life insurance or general insurance?"], "correct": 0, "sectionNum": 7, "sectionTitle": "Research \u2014 Where the Answers Are"}, {"q": "The AML/CTF Act 2006 is your go-to reference for which obligation?", "options": ["Best interests duty", "Client identification and verification", "Privacy principles", "Conflicted remuneration"], "correct": 1, "sectionNum": 7, "sectionTitle": "Research \u2014 Where the Answers Are"}, {"q": "Which of these is guidance rather than binding law?", "options": ["Privacy Act 1988", "Corporations Act 2001", "ASIC Regulatory Guides", "AML/CTF Act 2006"], "correct": 2, "sectionNum": 7, "sectionTitle": "Research \u2014 Where the Answers Are"}, {"q": "Which document does a wholesale client NOT need to be given?", "options": ["Nothing \u2014 all standard disclosure docs still apply", "A Statement of Advice (SOA)", "A verbal summary only", "None of the above"], "correct": 1, "sectionNum": 8, "sectionTitle": "Wholesale vs Retail Clients"}, {"q": "Under what circumstance can a Record of Advice (ROA) stand in for a Statement of Advice (SOA)?", "options": ["Whenever the client is wholesale", "For 'further advice' where the basis hasn't significantly changed", "Whenever the adviser prefers not to write a full SOA", "Whenever the client requests it, regardless of circumstances"], "correct": 1, "sectionNum": 8, "sectionTitle": "Wholesale vs Retail Clients"}, {"q": "Who does the Best Interests Duty under s961B actually apply to?", "options": ["All advice, regardless of client type", "Personal advice given to retail clients", "General advice only", "Wholesale clients only"], "correct": 1, "sectionNum": 8, "sectionTitle": "Wholesale vs Retail Clients"}, {"q": "When is a Product Disclosure Statement (PDS) required?", "options": ["When a retail client acquires a financial product", "When a wholesale client acquires any product", "Whenever general advice is given to anyone", "Never, under any circumstances"], "correct": 0, "sectionNum": 8, "sectionTitle": "Wholesale vs Retail Clients"}, {"q": "Even without statutory disclosure documents, what protection still applies to wholesale clients?", "options": ["Nothing at all", "General law prohibitions on misleading or deceptive conduct", "The Best Interests Duty", "Mandatory cooling-off periods"], "correct": 1, "sectionNum": 8, "sectionTitle": "Wholesale vs Retail Clients"}, {"q": "What type of advice is given when recommending a client set up an SMSF?", "options": ["General advice only", "Personal advice requiring a full best-interests process", "Factual information", "Advice exempt from the Corporations Act"], "correct": 1, "sectionNum": 9, "sectionTitle": "SMSF &amp; Insurance"}, {"q": "What extra obligation has applied to SMSF advice since 2021?", "options": ["No comparison to other options is required", "Comparing against alternatives such as an APRA-regulated fund", "Mandatory wholesale classification for the client", "Exemption from the best interests duty"], "correct": 1, "sectionNum": 9, "sectionTitle": "SMSF &amp; Insurance"}, {"q": "What's a key consideration when recommending insurance inside super?", "options": ["Ignoring the impact of premium funding", "How premiums affect the member's retirement balance over time", "Avoiding all TPD cover entirely", "Recommending only 'any occupation' cover regardless of the client"], "correct": 1, "sectionNum": 9, "sectionTitle": "SMSF &amp; Insurance"}, {"q": "What kind of liability do SMSF trustees personally carry?", "options": ["None at all", "Personal liability for the fund's compliance and decisions", "Liability only if they're also the adviser", "Liability limited to investment losses"], "correct": 1, "sectionNum": 9, "sectionTitle": "SMSF &amp; Insurance"}, {"q": "Why does the 'own occupation' vs 'any occupation' TPD distinction actually matter?", "options": ["It only affects premium cost, not claims", "It affects how easily a client can successfully claim, based on their occupation", "The definitions are identical across every product", "It only applies to SMSFs"], "correct": 1, "sectionNum": 9, "sectionTitle": "SMSF &amp; Insurance"}, {"q": "Simply stating a current interest rate figure, with no opinion attached, is an example of:", "options": ["Personal advice", "General advice", "Factual information", "Financial product advice"], "correct": 2, "sectionNum": 10, "sectionTitle": "Factual, General &amp; Personal Advice"}, {"q": "What must always accompany general advice?", "options": ["A Statement of Advice", "A general advice warning", "A Product Disclosure Statement only", "Nothing additional"], "correct": 1, "sectionNum": 10, "sectionTitle": "Factual, General &amp; Personal Advice"}, {"q": "What's the legal test that defines 'personal advice'?", "options": ["Whether the client paid a fee", "Whether the advice considers, or a reasonable person would expect it to consider, the client's objectives, financial situation or needs", "Whether it was given in writing", "Whether it was given to a retail client only"], "correct": 1, "sectionNum": 10, "sectionTitle": "Factual, General &amp; Personal Advice"}, {"q": "A presenter tells an audience of people close to retirement they should scale back growth assets given their life stage. What kind of advice is this most likely to be?", "options": ["Factual information", "General advice, no exceptions apply", "Personal advice, because personal circumstances were referenced", "Not regulated at all"], "correct": 2, "sectionNum": 10, "sectionTitle": "Factual, General &amp; Personal Advice"}, {"q": "Which of these actually triggers the best interests duty?", "options": ["Providing factual information", "Providing general advice", "Providing personal advice", "Providing a PDS"], "correct": 2, "sectionNum": 10, "sectionTitle": "Factual, General &amp; Personal Advice"}, {"q": "How is general insurance (like car or home cover) treated under the 'relevant financial product' definition?", "options": ["It's a relevant financial product requiring a FASEA-qualified adviser", "It's excluded from the 'relevant financial product' definition", "It's regulated under the NCCP Act", "It can only be sold by financial advisers"], "correct": 1, "sectionNum": 11, "sectionTitle": "Who Can Advise on What: Mortgages, Insurance &amp; Credit"}, {"q": "What licence does a mortgage broker need to hold, or operate under?", "options": ["An AFSL", "An Australian Credit Licence (ACL)", "A Tier 2 RG146 qualification only", "No licence at all"], "correct": 1, "sectionNum": 11, "sectionTitle": "Who Can Advise on What: Mortgages, Insurance &amp; Credit"}, {"q": "What obligation applies specifically to mortgage brokers since 2021?", "options": ["The same best interests duty as financial advisers under s961B", "Their own separate best interests duty under the NCCP framework", "No best interests duty at all", "FASEA's Code of Ethics"], "correct": 1, "sectionNum": 11, "sectionTitle": "Who Can Advise on What: Mortgages, Insurance &amp; Credit"}, {"q": "If a financial adviser wants to advise directly on a client's home loan terms, what do they need beyond their AFSL authorisation?", "options": ["Nothing extra \u2014 AFSL covers it", "Credit licence / credit representative authorisation under the NCCP Act", "Only a general advice warning", "A Tier 1 RG146 qualification"], "correct": 1, "sectionNum": 11, "sectionTitle": "Who Can Advise on What: Mortgages, Insurance &amp; Credit"}, {"q": "General insurance advice is typically delivered under which framework?", "options": ["Full personal advice with an SOA", "General advice, with Tier 1 or Tier 2 (RG146) training", "The Code of Ethics best interests duty", "An Australian Credit Licence"], "correct": 1, "sectionNum": 11, "sectionTitle": "Who Can Advise on What: Mortgages, Insurance &amp; Credit"}, {"q": "An adviser follows every checklist step correctly and submits on time, but recommends a geared investment without understanding how gearing amplifies losses. If it isn't Diligence, what is it?", "options": ["Competence", "Honesty", "Fairness", "Trustworthiness"], "correct": 0, "sectionNum": 2, "sectionTitle": "Overlapping Values \u2014 The Elimination Technique"}, {"q": "An adviser fully discloses a conflict of interest and the client is comfortable proceeding, but the adviser then misses a compliance lodgement deadline. If it isn't Fairness, what is it?", "options": ["Diligence", "Honesty", "Competence", "Trustworthiness"], "correct": 0, "sectionNum": 2, "sectionTitle": "Overlapping Values \u2014 The Elimination Technique"}, {"q": "An adviser understands a client's needs and the product terms perfectly, but tells them a policy has 'no exclusions' knowing it excludes pre-existing conditions, just to close the sale. If it isn't Competence, what is it?", "options": ["Honesty", "Fairness", "Diligence", "Trustworthiness"], "correct": 0, "sectionNum": 2, "sectionTitle": "Overlapping Values \u2014 The Elimination Technique"}, {"q": "An adviser's SOA is completely accurate, but they consistently recommend in-house funds over better external options, despite disclosing the arrangement each time. If it isn't Honesty, what is it?", "options": ["Fairness", "Competence", "Diligence", "Trustworthiness"], "correct": 0, "sectionNum": 2, "sectionTitle": "Overlapping Values \u2014 The Elimination Technique"}, {"q": "An adviser produces thorough, accurate work on every file, but has told this client three times they'd send updated documents and never has. If it isn't Diligence, what is it?", "options": ["Trustworthiness", "Competence", "Honesty", "Fairness"], "correct": 0, "sectionNum": 2, "sectionTitle": "Overlapping Values \u2014 The Elimination Technique"}, {"q": "Which of these is NOT something a Target Market Determination (TMD) must specify?", "options": ["Target market description", "Distribution conditions", "The adviser's fee for recommending the product", "Review triggers"], "correct": 2, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "Within what timeframe must a distributor notify an issuer of a 'significant dealing' outside a product's target market?", "options": ["24 hours", "10 business days", "30 calendar days", "There's no notification requirement"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "Which of these is a genuine example of a TMD 'review trigger'?", "options": ["The adviser changes employer", "A significant dealing outside the target market occurs", "The client turns 65", "The product's ticker code changes"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "A distributor's obligations under DDO include:", "options": ["Setting the product's target market themselves", "Keeping records of distribution conduct and complaints", "Approving the issuer's PDS", "Deciding the product's investment strategy"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "An adviser recommends a fund outside its stated target market because it uniquely suits an unusual client need. What does DDO require?", "options": ["Nothing \u2014 TMDs are only guidelines", "Justify and document the dealing, and report it to the issuer within 10 business days if significant", "Reclassify the client as wholesale", "Cancel the adviser's AFSL authorisation"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "What does RG 146 set training standards for?", "options": ["Relevant providers under FASEA", "People giving general advice (Tier 1/Tier 2)", "SMSF trustees", "AFSL compliance officers only"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "Which RG governs how fees and costs are disclosed in PDSs and periodic statements?", "options": ["RG 97", "RG 175", "RG 244", "RG 271"], "correct": 0, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "What does RG 279 deal with?", "options": ["Conflicted remuneration", "Breach reporting under the reportable situations regime", "General insurance training standards", "AML/CTF client identification"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "Which RG specifically addresses managing conflicts of interest for licensees?", "options": ["RG 104", "RG 105", "RG 181", "RG 246"], "correct": 2, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "On the exam, if asked whether an RG is binding law, what's always true?", "options": ["RGs are equivalent to legislation", "RGs are ASIC's guidance on how it applies the law, not binding law itself", "It depends which RG", "Only newer RGs are binding"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "What does 'ongoing customer due diligence' under AML/CTF actually involve?", "options": ["Verifying ID once at onboarding only", "Monitoring transactions on an ongoing basis for consistency with the client's known profile", "It only applies to wholesale clients", "It's only required for cash transactions"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "Who typically receives enhanced due diligence under AML/CTF?", "options": ["Every client, regardless of risk", "Higher-risk clients such as politically exposed persons", "Only clients under 18", "Only general advice clients"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "At what cash-equivalent transaction value does a Threshold Transaction Report generally apply?", "options": ["$1,000 or more", "$10,000 or more", "$100,000 or more", "Any amount"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "How long must AML/CTF-related records generally be retained?", "options": ["1 year", "3 years", "7 years", "Indefinitely"], "correct": 2, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "Which of these is a genuine AML/CTF red flag?", "options": ["Prompt provision of ID documents", "An urgent, unexplained large transfer from an unrelated third party", "Routine questions about fees", "Updating contact details"], "correct": 1, "sectionNum": 5, "sectionTitle": "DDO, ASIC RGs &amp; AML/CTF"}, {"q": "What must a licensee's arrangements under s912A adequately provide for?", "options": ["Guaranteeing zero complaints", "Supervising and monitoring representatives' compliance", "Setting the product issuer's TMD", "Approving every PDS on the market"], "correct": 1, "sectionNum": 12, "sectionTitle": "Breaches \u2014 Who's Responsible"}, {"q": "An adviser skips a proper fact find and recommends unsuitable insurance. Who's primarily responsible for that specific conduct?", "options": ["The product issuer", "The individual adviser", "ASIC", "AFCA"], "correct": 1, "sectionNum": 12, "sectionTitle": "Breaches \u2014 Who's Responsible"}, {"q": "A PDS understates fees due to the issuer's own calculation error, and an adviser reasonably relies on it. Who's primarily responsible?", "options": ["The adviser", "The licensee", "The product issuer", "The client"], "correct": 2, "sectionNum": 12, "sectionTitle": "Breaches \u2014 Who's Responsible"}, {"q": "A licensee's monitoring system fails to catch a pattern of unsuitable advice across multiple advisers. What does this point to?", "options": ["A failure by the individual advisers only", "A failure in the licensee's supervisory/compliance systems", "A failure by the product issuer", "A failure by ASIC"], "correct": 1, "sectionNum": 12, "sectionTitle": "Breaches \u2014 Who's Responsible"}, {"q": "How is responsibility for a breach generally worked out?", "options": ["Whichever entity has the deepest pockets", "By identifying where the actual failure occurred \\u2014 conduct, supervision, or product/disclosure", "It's always the licensee, regardless of facts", "It's always the individual adviser, regardless of facts"], "correct": 1, "sectionNum": 12, "sectionTitle": "Breaches \u2014 Who's Responsible"}, {"q": "Under the reportable situations regime, who actually reports to ASIC?", "options": ["The individual adviser directly", "The AFSL licensee", "The client", "AFCA"], "correct": 1, "sectionNum": 13, "sectionTitle": "Breach Reporting Obligations"}, {"q": "What's the reporting deadline once a licensee identifies a reportable situation?", "options": ["24 hours", "10 business days", "30 calendar days", "90 calendar days"], "correct": 2, "sectionNum": 13, "sectionTitle": "Breach Reporting Obligations"}, {"q": "An adviser spots a possible reportable situation. What's their first step?", "options": ["Report directly to ASIC", "Notify their AFSL licensee as soon as practicable", "Do nothing until a client complains", "Report directly to AFCA"], "correct": 1, "sectionNum": 13, "sectionTitle": "Breach Reporting Obligations"}, {"q": "Which factor helps determine whether a breach is 'significant' enough to report?", "options": ["The adviser's years of experience", "Whether it affects many clients or points to a systemic issue", "The adviser's location", "The time of year"], "correct": 1, "sectionNum": 13, "sectionTitle": "Breach Reporting Obligations"}, {"q": "If a client wins an AFCA complaint, does that automatically trigger an ASIC breach report?", "options": ["Yes, always automatically", "No \\u2014 but the licensee should assess whether it points to something systemic or significant", "Only if the client insists", "Only above $1 million"], "correct": 1, "sectionNum": 13, "sectionTitle": "Breach Reporting Obligations"}, {"q": "A prospective client asks general fee questions by phone without giving their name. What does this reflect?", "options": ["A breach of APP 3", "APP 2 in action \\u2014 allowing anonymous interaction where practicable", "A mandatory identification requirement", "A breach of APP 9"], "correct": 1, "sectionNum": 6, "sectionTitle": "Australian Privacy Principles (APPs)"}, {"q": "An adviser only collects the fact-find information relevant to giving advice, not unrelated personal details. This reflects:", "options": ["APP 6", "APP 3", "APP 11", "APP 13"], "correct": 1, "sectionNum": 6, "sectionTitle": "Australian Privacy Principles (APPs)"}, {"q": "A licensee stores client data with an offshore CRM provider. Under APP 8, what's required?", "options": ["Nothing \\u2014 offshore storage isn't covered", "Reasonable steps to ensure the overseas provider also protects the data consistently with the APPs", "Notifying OAIC before every offshore transfer", "Avoiding all data collection"], "correct": 1, "sectionNum": 6, "sectionTitle": "Australian Privacy Principles (APPs)"}, {"q": "An adviser records a client's TFN for tax purposes but never uses it as an internal file reference. This reflects:", "options": ["APP 3", "APP 9", "APP 12", "APP 5"], "correct": 1, "sectionNum": 6, "sectionTitle": "Australian Privacy Principles (APPs)"}, {"q": "A client asks for a copy of everything a practice holds about them, and it's provided within a reasonable timeframe. This reflects:", "options": ["APP 6", "APP 9", "APP 12", "APP 13"], "correct": 2, "sectionNum": 6, "sectionTitle": "Australian Privacy Principles (APPs)"}, {"q": "What's the key advantage of using a corporate trustee for an SMSF?", "options": ["Lower setup cost than individual trustees", "Cleaner separation of personal and fund assets, plus smoother succession", "Exemption from the sole purpose test", "No investment strategy requirement"], "correct": 1, "sectionNum": 9, "sectionTitle": "SMSF &amp; Insurance"}, {"q": "What is the general concessional contributions cap for FY2026\\u201327?", "options": ["$27,500", "$30,000", "$32,500", "$120,000"], "correct": 2, "sectionNum": 9, "sectionTitle": "SMSF &amp; Insurance"}, {"q": "What does the non-concessional bring-forward rule allow, broadly?", "options": ["Unlimited contributions regardless of balance", "Access to up to three years' worth of the non-concessional cap in one year, subject to eligibility", "An exemption from the sole purpose test", "Converting concessional contributions into non-concessional ones"], "correct": 1, "sectionNum": 9, "sectionTitle": "SMSF &amp; Insurance"}, {"q": "What does the transfer balance cap actually limit?", "options": ["The total amount an SMSF can hold", "The amount that can be moved into a tax-free retirement phase pension", "The maximum number of SMSF members", "The maximum insurance cover held inside super"], "correct": 1, "sectionNum": 9, "sectionTitle": "SMSF &amp; Insurance"}, {"q": "At minimum, what must an SMSF's investment strategy address?", "options": ["Only expected investment returns", "Diversification, liquidity, risk/return, and insurance for members", "Only which adviser is engaged", "Only tax obligations"], "correct": 1, "sectionNum": 9, "sectionTitle": "SMSF &amp; Insurance"}, {"q": "Who generally needs to be registered with the TPB to prepare and lodge a client's tax return?", "options": ["Any financial adviser", "A registered tax agent (or BAS agent for BAS-related work)", "Any AFSL holder automatically", "No registration is required"], "correct": 1, "sectionNum": 11, "sectionTitle": "Who Can Advise on What: Mortgages, Insurance &amp; Credit"}, {"q": "What does 'tax (financial) advice' actually mean?", "options": ["Comprehensive tax advice unrelated to any financial product", "Tax advice that's incidental to financial product advice, e.g. the tax impact of a super strategy", "Advice only accountants can give", "Advice requiring separate ASIC registration"], "correct": 1, "sectionNum": 11, "sectionTitle": "Who Can Advise on What: Mortgages, Insurance &amp; Credit"}, {"q": "Since the 2022 reforms, how do relevant providers deliver tax (financial) advice?", "options": ["By separately registering as a tax agent", "As part of their normal AFSL authorisation, provided they're a qualified tax relevant provider and their licensee has notified the TPB", "They can't give any tax-related advice at all", "Only if they hold a CPA qualification"], "correct": 1, "sectionNum": 11, "sectionTitle": "Who Can Advise on What: Mortgages, Insurance &amp; Credit"}, {"q": "An adviser explains the tax-free thresholds relevant to a client's pension strategy inside a broader SOA. What is this?", "options": ["An unauthorised act requiring TPB tax agent registration", "Tax (financial) advice, permitted as part of the financial advice being given", "Illegal under the Corporations Act", "Only permitted for wholesale clients"], "correct": 1, "sectionNum": 11, "sectionTitle": "Who Can Advise on What: Mortgages, Insurance &amp; Credit"}, {"q": "Can a financial adviser without tax agent registration prepare and lodge a client's tax return?", "options": ["Yes, always", "No \\u2014 that requires registration as a tax agent (or BAS agent) with the TPB", "Yes, but only for retail clients", "Yes, but only once a year"], "correct": 1, "sectionNum": 11, "sectionTitle": "Who Can Advise on What: Mortgages, Insurance &amp; Credit"}, {"q": "How is conflicted remuneration best defined under s963A?", "options": ["Any payment made by a client to their adviser", "Any benefit that could reasonably be expected to influence the advice given or products recommended", "Any commission on general insurance", "Any fee disclosed in an FSG"], "correct": 1, "sectionNum": 14, "sectionTitle": "Conflicted Remuneration &amp; Soft Dollar Benefits"}, {"q": "Which of these is generally banned as conflicted remuneration?", "options": ["Fee for service paid directly by the client", "Volume-based payments tied to sales placed with a particular product provider", "General insurance commissions", "Life risk insurance commissions within LIF caps"], "correct": 1, "sectionNum": 14, "sectionTitle": "Conflicted Remuneration &amp; Soft Dollar Benefits"}, {"q": "A fund manager pays a licensee a bonus based on the percentage of client funds placed into its products. What is this?", "options": ["A legitimate marketing partnership", "A volume-based/shelf-space payment, generally banned as conflicted remuneration", "A soft dollar benefit exempt from all rules", "A permitted fee for service"], "correct": 1, "sectionNum": 14, "sectionTitle": "Conflicted Remuneration &amp; Soft Dollar Benefits"}, {"q": "What must generally happen with soft dollar benefits above the minimal threshold?", "options": ["They can be ignored, since they're non-cash", "They must be recorded in a soft dollar benefits register, and can't be tied to volume or influence advice", "They're automatically banned regardless of amount", "They're only disclosed if the client asks"], "correct": 1, "sectionNum": 14, "sectionTitle": "Conflicted Remuneration &amp; Soft Dollar Benefits"}, {"q": "Why do a licensee's internal KPIs tied to proprietary product sales create a conflicted remuneration risk?", "options": ["They aren't a risk at all", "They can quietly steer advisers toward products that benefit the licensee rather than the client \\u2014 a key Royal Commission concern", "They only matter for general insurance", "They're only relevant to wholesale clients"], "correct": 1, "sectionNum": 14, "sectionTitle": "Conflicted Remuneration &amp; Soft Dollar Benefits"}, {"q": "All of the following are excluded from 'relevant financial product', EXCEPT:", "options": ["General insurance", "Basic banking products", "Life insurance", "Non-cash payment products"], "correct": 2, "sectionNum": 15, "sectionTitle": "Left Field Bullshit Questions"}, {"q": "An adviser has a lengthy Friday meeting, discusses a client's upcoming trip, then recommends more income protection given the client's new travel-heavy job. Is this personal advice?", "options": ["No, the timing rules it out", "No, holiday chat isn't advice-relevant", "Yes \\u2014 the recommendation considers the client's actual circumstances", "Only if the meeting ran long"], "correct": 2, "sectionNum": 15, "sectionTitle": "Left Field Bullshit Questions"}, {"q": "Which of these would NOT be considered inconsistent with the sole purpose test?", "options": ["A rental property later occupied rent-free by a member's child", "Units in a widely-held, unrelated commercial property trust", "A below-market loan to a member's business", "Fund-owned artwork decorating a trustee's home"], "correct": 1, "sectionNum": 15, "sectionTitle": "Left Field Bullshit Questions"}, {"q": "A disclosed marketing support payment from a super fund to a licensee \\u2014 does disclosure make this non-conflicted?", "options": ["Yes, disclosure resolves it", "No \\u2014 disclosure doesn't cure conflicted remuneration tied to influencing advice", "Yes, if under $1,000", "Only if a client complains"], "correct": 1, "sectionNum": 15, "sectionTitle": "Left Field Bullshit Questions"}, {"q": "An adviser hasn't updated a client's risk profile in five years despite major life changes. Which value is MOST directly engaged?", "options": ["Honesty", "Diligence", "Competence", "Trustworthiness"], "correct": 1, "sectionNum": 15, "sectionTitle": "Left Field Bullshit Questions"}, {"q": "Under the reportable situations regime, which statement is TRUE?", "options": ["Only breaches affecting 10+ clients must be reported", "A licensee can be required to report a situation about a different licensee in certain circumstances", "Advisers report directly to ASIC", "Reporting is voluntary"], "correct": 1, "sectionNum": 15, "sectionTitle": "Left Field Bullshit Questions"}, {"q": "How many business days does a distributor have to notify an issuer of a significant TMD dealing?", "options": ["5", "10", "14", "20"], "correct": 1, "sectionNum": 15, "sectionTitle": "Left Field Bullshit Questions"}, {"q": "An adviser recommends outside a TMD after genuine inquiry, documents it thoroughly, and reports it as required. Has anything gone wrong?", "options": ["Yes, TMD dealings are never allowed", "No \\u2014 this is the correct process for a justified, documented, reported dealing", "Yes, the client needed wholesale reclassification", "Yes, ASIC pre-approval was required"], "correct": 1, "sectionNum": 15, "sectionTitle": "Left Field Bullshit Questions"}, {"q": "Must every isolated, harmless TMD dealing always be reported as 'significant'?", "options": ["Yes, always", "Only if assessed as significant based on client impact, harm, and pattern", "No, isolated dealings are never reportable", "Only on client complaint"], "correct": 1, "sectionNum": 15, "sectionTitle": "Left Field Bullshit Questions"}, {"q": "Is a mortgage broker's NCCP best interests duty the same legal duty as a financial adviser's s961B duty?", "options": ["Yes, identical", "No \\u2014 a separate duty under credit law", "Only for wholesale borrowers", "It's enforced by FASEA"], "correct": 1, "sectionNum": 15, "sectionTitle": "Left Field Bullshit Questions"}];
+  var poolSize = FULL_POOL.length;
+  var QUIZ = [];
+  var total = 0;
   var current = 0;
-  var answers = new Array(total).fill(null);
+  var answers = [];
 
+  var startScreen = document.getElementById('qz-start');
+  var quizBody = document.getElementById('qz-body');
   var qContainer = document.getElementById('qz-single-q');
   var progressText = document.getElementById('qz-progress-text');
   var progressFill = document.getElementById('qz-progressbar-fill');
   var prevBtn = document.getElementById('qz-prev');
   var nextBtn = document.getElementById('qz-next');
   var retryBtn = document.getElementById('qz-retry');
+  var downloadBtn = document.getElementById('qz-download');
   var resultBox = document.getElementById('qz-result');
   var reviewRows = document.getElementById('qz-review-rows');
   var navBar = document.querySelector('.qz-nav');
+  var lenNote = document.getElementById('qz-len-note');
 
   var letters = ['A','B','C','D'];
+
+  function shuffle(arr){
+    var a = arr.slice();
+    for(var i = a.length - 1; i > 0; i--){
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+  }
+
+  function startQuiz(requested){
+    var n = Math.min(requested, poolSize);
+    QUIZ = shuffle(FULL_POOL).slice(0, n);
+    total = QUIZ.length;
+    answers = new Array(total).fill(null);
+    current = 0;
+    startScreen.style.display = 'none';
+    quizBody.style.display = 'block';
+    renderQuestion(0);
+  }
+
+  document.querySelectorAll('.qz-len-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      startQuiz(parseInt(btn.getAttribute('data-n'), 10));
+    });
+  });
 
   function renderQuestion(i){
     var q = QUIZ[i];
@@ -1127,7 +2196,66 @@ Nathan gives a client general advice on comprehensive car insurance and mentions
     }).join('');
 
     retryBtn.style.display = 'inline-block';
+    downloadBtn.style.display = 'inline-block';
     resultBox.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+
+  function downloadResultsPdf(){
+    var score = 0;
+    QUIZ.forEach(function(q, i){ if(answers[i] === q.correct) score++; });
+    var pct = Math.round((score/total)*100);
+    var today = new Date().toLocaleDateString('en-AU', {year:'numeric', month:'long', day:'numeric'});
+
+    var rowsHtml = QUIZ.map(function(q, i){
+      var chosen = answers[i];
+      var chosenText = chosen === null ? 'Not answered' : (letters[chosen] + '. ' + q.options[chosen]);
+      var correctText = letters[q.correct] + '. ' + q.options[q.correct];
+      var isCorrect = chosen === q.correct;
+      var statusLabel = isCorrect ? 'CORRECT' : 'INCORRECT';
+      var rowClass = isCorrect ? 'ok' : 'bad';
+      return '<div class="item ' + rowClass + '">' +
+        '<div class="qnum">Q' + (i+1) + ' \u00b7 Section ' + q.sectionNum + ' \u2014 ' + q.sectionTitle + ' \u2014 <span class="status">' + statusLabel + '</span></div>' +
+        '<div class="qtext">' + q.q + '</div>' +
+        '<div class="ans-line"><strong>Your answer:</strong> ' + chosenText + '</div>' +
+        (isCorrect ? '' : '<div class="ans-line correct-line"><strong>Correct answer:</strong> ' + correctText + '</div>') +
+      '</div>';
+    }).join('');
+
+    var reportHtml =
+      '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>FASEA Quiz Results \u2014 Nathan</title><style>' +
+      'body{font-family:Helvetica,Arial,sans-serif;color:#1a1a1a;margin:32px;}' +
+      'h1{font-size:22px;margin:0 0 4px;}' +
+      '.meta{font-size:12px;color:#666;margin-bottom:18px;}' +
+      '.summary{font-size:16px;font-weight:bold;background:#f1eefc;border-left:4px solid #6b4ce6;padding:10px 14px;margin-bottom:24px;}' +
+      '.item{border:1px solid #ddd;border-radius:6px;padding:10px 14px;margin-bottom:10px;page-break-inside:avoid;}' +
+      '.item.ok{border-left:4px solid #0d8a5a;}' +
+      '.item.bad{border-left:4px solid #c22766;}' +
+      '.qnum{font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:#666;margin-bottom:4px;}' +
+      '.status{font-weight:bold;}' +
+      '.item.ok .status{color:#0d8a5a;}' +
+      '.item.bad .status{color:#c22766;}' +
+      '.qtext{font-weight:bold;font-size:13px;margin-bottom:6px;}' +
+      '.ans-line{font-size:12.5px;margin-bottom:2px;}' +
+      '.correct-line{color:#0d8a5a;}' +
+      '@media print { body{margin:14mm;} }' +
+      '</style></head><body>' +
+      '<h1>FASEA Exam Practice Quiz \u2014 Results</h1>' +
+      '<div class="meta">Nathan \u00b7 ' + today + ' \u00b7 ' + total + ' questions</div>' +
+      '<div class="summary">Score: ' + score + ' / ' + total + ' (' + pct + '%)</div>' +
+      rowsHtml +
+      '</body></html>';
+
+    var win = window.open('', '_blank');
+    if(!win){ alert('Please allow pop-ups to download the PDF, then click Download again.'); return; }
+    win.document.open();
+    win.document.write(reportHtml);
+    win.document.close();
+    win.onload = function(){
+      win.focus();
+      win.print();
+    };
+    // Fallback in case onload doesn't fire (some browsers with document.write)
+    setTimeout(function(){ try { win.focus(); win.print(); } catch(e){} }, 400);
   }
 
   prevBtn.addEventListener('click', function(){
@@ -1144,20 +2272,22 @@ Nathan gives a client general advice on comprehensive car insurance and mentions
     }
   });
 
+  downloadBtn.addEventListener('click', downloadResultsPdf);
+
   retryBtn.addEventListener('click', function(){
-    current = 0;
-    answers = new Array(total).fill(null);
+    startScreen.style.display = 'block';
+    quizBody.style.display = 'none';
+    resultBox.style.display = 'none';
+    retryBtn.style.display = 'none';
+    downloadBtn.style.display = 'none';
     qContainer.style.display = 'block';
     navBar.style.display = 'flex';
     progressText.style.display = 'block';
     document.querySelector('.qz-progressbar').style.display = 'block';
-    resultBox.style.display = 'none';
-    retryBtn.style.display = 'none';
-    renderQuestion(0);
     window.scrollTo({top: document.getElementById('final-quiz').offsetTop - 20, behavior:'smooth'});
   });
 
-  renderQuestion(0);
+  if(lenNote){ lenNote.textContent = poolSize < 80 ? ('Question bank currently has ' + poolSize + ' questions \u2014 more topics are being added over time.') : ''; }
 })();
 </script>
 </body>
